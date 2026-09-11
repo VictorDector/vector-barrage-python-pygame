@@ -1,0 +1,28 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local environments
+.venv/
+.venv-*/
+.envs/
+
+# Packaging/build output
+build/
+dist/
+*.spec
+!packaging/VectorBarrage.spec
+*.egg-info/
+
+# IDE / OS local state
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Temporary QA/runtime artifacts
+*.tmp
+*.log
