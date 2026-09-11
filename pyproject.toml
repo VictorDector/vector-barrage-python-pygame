@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "vector-barrage"
-version = "1.1.0a0"
+version = "1.1.0"
 description = "A clean-room fixed-shooter arcade game built with Python and Pygame."
 requires-python = ">=3.13,<3.14"
 dependencies = [
