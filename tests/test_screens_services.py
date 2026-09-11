@@ -7,7 +7,7 @@ import pytest
 from vector_barrage.audio import NullAudioService
 from vector_barrage.config import AUTHOR_NAME, PRODUCT_NAME, PUBLIC_GITHUB_URL
 from vector_barrage.links import validate_public_url
-from vector_barrage.screens.about import about_lines
+from vector_barrage.screens.about import about_lines, wrap_text_to_width
 from vector_barrage.screens.menu import MenuChoice, menu_choice_for_index
 from vector_barrage.screens.name_entry import NameEntryResult, normalize_player_name
 from vector_barrage.screens.scores import format_score_rows
@@ -53,6 +53,26 @@ def test_about_copy_uses_factual_generated_media_wording() -> None:
     copy = "\n".join(about_lines())
     assert "medios generados" in copy
     assert "redistribuibles" not in copy
+
+    class FixedWidthFont:
+        @staticmethod
+        def size(text: str) -> tuple[int, int]:
+            return len(text) * 12, 30
+
+    font = FixedWidthFont()
+    max_width = 680
+    wrapped_groups = [
+        wrap_text_to_width(paragraph, font, max_width)
+        for paragraph in about_lines()[1:]
+    ]
+
+    assert any(len(group) > 1 for group in wrapped_groups)
+    assert all(
+        font.size(line)[0] <= max_width
+        for group in wrapped_groups
+        for line in group
+    )
+    assert [" ".join(group) for group in wrapped_groups] == list(about_lines()[1:])
 
 
 def test_approved_github_link_is_https() -> None:

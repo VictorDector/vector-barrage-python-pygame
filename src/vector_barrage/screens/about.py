@@ -25,6 +25,31 @@ def about_lines() -> tuple[str, ...]:
     )
 
 
+def wrap_text_to_width(text: str, font, max_width: int) -> tuple[str, ...]:
+    """Wrap text on word boundaries so each rendered line fits ``max_width``."""
+
+    if max_width <= 0:
+        raise ValueError("max_width must be positive")
+
+    words = text.split()
+    if not words:
+        return ("",)
+
+    wrapped: list[str] = []
+    current = words[0]
+
+    for word in words[1:]:
+        candidate = f"{current} {word}"
+        if font.size(candidate)[0] <= max_width:
+            current = candidate
+        else:
+            wrapped.append(current)
+            current = word
+
+    wrapped.append(current)
+    return tuple(wrapped)
+
+
 class AboutScreen:
     """Render public product information and expose the approved project link."""
 
@@ -82,12 +107,21 @@ class AboutScreen:
         title = title_font.render(lines[0], True, self.ACCENT)
         surface.blit(title, title.get_rect(center=(width // 2, 95)))
 
-        for index, line in enumerate(lines[1:]):
-            text = body_font.render(line, True, self.TEXT)
-            surface.blit(text, text.get_rect(center=(width // 2, 190 + index * 48)))
+        body_max_width = max(width - 120, 1)
+        body_y = 175
+        line_step = max(body_font.get_linesize(), 34)
+        paragraph_gap = 8
+
+        for paragraph in lines[1:]:
+            for wrapped_line in wrap_text_to_width(paragraph, body_font, body_max_width):
+                text = body_font.render(wrapped_line, True, self.TEXT)
+                surface.blit(text, text.get_rect(center=(width // 2, body_y)))
+                body_y += line_step
+            body_y += paragraph_gap
 
         link = link_font.render("GitHub del proyecto", True, self.ACCENT)
-        link_rect = link.get_rect(center=(width // 2, 390))
+        link_y = min(max(390, body_y + 10), height - 110)
+        link_rect = link.get_rect(center=(width // 2, link_y))
         surface.blit(link, link_rect)
 
         hint = hint_font.render("G / clic: abrir GitHub · ESC: volver", True, self.MUTED)
