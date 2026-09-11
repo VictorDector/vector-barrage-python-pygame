@@ -3,7 +3,7 @@
 Project: **Vector Barrage**  
 Release target: `v1.1.0`  
 Publication profile: **Source-First Portfolio Repository**  
-Status: AS-BUILT / DOCUMENTATION INTEGRATION CORRECTION IMPLEMENTED
+Status: AS-BUILT / PUBLICATION-STATE SYNCHRONIZED
 
 ## Purpose
 
@@ -39,9 +39,9 @@ Detailed responsibilities belong in `02_architecture/`; acceptance criteria in `
 | Packaged persistence | executable-dir `scores.txt` | `NFR-12` | PASS / INTERNAL EVIDENCE |
 | MIT license | `LICENSE` | `NFR-14` | PASS / ACCEPTED |
 | Third-party boundary | `NOTICE.md` | `NFR-14` | PASS / ACCEPTED |
-| Engineering dossier | README + `00`–`06` | `NFR-13` | PARITY REMEDIATED / INTEGRATION CORRECTION IMPLEMENTED / QA REQUIRED |
-| Screenshot evidence | `evidence/screenshots/` | `NFR-15` | CAPTURED / QA PENDING / BLOCKED BY DOC GATE |
-| Clean public tree | target public repository | `NFR-16` | NOT CREATED |
+| Engineering dossier | README + `00`–`06` | `NFR-13` | PASS / ACCEPTED |
+| Screenshot evidence | `evidence/screenshots/` | `NFR-15` | PRESENT / ACCEPTED BY OWNER DECISION |
+| Clean public tree | target public repository | `NFR-16` | PUBLISHED / STATIC REMOTE QA PASS / CLEAN-CHECKOUT PENDING |
 
 ## 2. Physical Dependency Map
 
@@ -219,15 +219,15 @@ Accepted:
 Documentation state:
 
 - cross-version quality-parity audit completed;
-- targeted six-document remediation implemented;
-- cross-document integration correction implemented;
-- integration QA still required before the documentation gate can close.
+- targeted six-document remediation accepted;
+- cross-document integration correction accepted;
+- documentation gate closed;
+- screenshot evidence admitted by release-owner decision;
+- clean public repository published with independent root history;
+- static remote-tree verification PASS.
 
 Still open:
 
-- QA/acceptance of the corrected documentation integration state;
-- visual admission and filename normalization of four screenshots;
-- creation of clean public repository;
 - final clean-checkout install/tests/source smoke QA;
 - final publication decision.
 
@@ -242,9 +242,11 @@ MIT_LICENSE                       = PASS
 THIRD_PARTY_NOTICE                = PASS
 WINDOWS_PACKAGE                   = PASS / INTERNAL EVIDENCE
 PUBLIC_BINARY_DISTRIBUTION        = N/A
-DOCUMENTATION_QUALITY_PARITY      = REMEDIATION IMPLEMENTED
-DOCUMENTATION_INTEGRATION         = CORRECTION IMPLEMENTED / QA REQUIRED
-SCREENSHOT_ADMISSION              = BLOCKED UNTIL DOCUMENTATION GATE CLOSES
-PUBLIC_REPOSITORY                 = NOT CREATED
+DOCUMENTATION_QUALITY_PARITY      = PASS / ACCEPTED
+DOCUMENTATION_INTEGRATION         = PASS / ACCEPTED
+SCREENSHOT_ADMISSION              = ACCEPTED / OWNER DECISION
+PUBLIC_REPOSITORY                 = PUBLISHED / CLEAN ROOT HISTORY
+STATIC_REMOTE_TREE_QA             = PASS
+FINAL_PUBLIC_TREE_QA              = PARTIAL / CLEAN-CHECKOUT QA PENDING
 RELEASE                           = OPEN
 ```

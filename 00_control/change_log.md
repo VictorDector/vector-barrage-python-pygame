@@ -36,8 +36,9 @@ Record material changes to the public Vector Barrage product and its release art
 | `VB-CHG-022` | `v1.1.0a0` | Hardened Windows package built from pinned source/config snapshot and validated through archive, runtime, first-run initialization and persistence/relaunch QA. | Demonstrate a complete native packaging path and remove previously identified bundled-font/icon/VC-runtime blockers. | CLOSED — INTERNAL ENGINEERING EVIDENCE |
 | `VB-CHG-023` | `v1.1.0a0` | Publication scope changed to **Source-First Portfolio Repository**; public executable download and GitHub binary release removed from current scope. | Match publication effort to portfolio evidence needs while preserving completed packaging work as internal evidence. | CLOSED |
 | `VB-CHG-024` | `v1.1.0a0` | MIT `LICENSE` created for Vector Barrage-owned material and concise Python/Pygame third-party `NOTICE.md` implemented. | Close the licensing boundary required for a source-first public repository without activating full binary redistribution compliance. | CLOSED |
-| `VB-CHG-025` | `v1.1.0a0` | Publication-facing documentation and repository mask reconciled to the source-first profile and current `125 PASS` baseline. | Remove stale binary-release requirements, obsolete 109-test claims and outdated licensing HOLD language before public-tree assembly. | CANDIDATE / QA PASS — APPROVAL REQUIRED |
-| `VB-CHG-026` | `v1.1.0a0` | Cross-version documentation quality audit used the accepted first-version dossier as a quality benchmark and applied targeted parity remediation to six Vector Barrage documents. | Preserve or improve documentation quality without copying obsolete private/binary-release content or inflating the public dossier. Restored project-context depth, behavioral contract granularity, explicit test/independence architecture, validated WSL2/X11 runbook detail, requirement-level acceptance traceability and the final public-tree acceptance gate. | IMPLEMENTED / QA REQUIRED |
+| `VB-CHG-025` | `v1.1.0a0` | Publication-facing documentation and repository mask reconciled to the source-first profile and current `125 PASS` baseline. | Remove stale binary-release requirements, obsolete 109-test claims and outdated licensing HOLD language before public-tree assembly. | CLOSED / ACCEPTED |
+| `VB-CHG-026` | `v1.1.0a0` | Cross-version documentation quality audit used the accepted first-version dossier as a quality benchmark and applied targeted parity remediation to six Vector Barrage documents. | Preserve or improve documentation quality without copying obsolete private/binary-release content or inflating the public dossier. Restored project-context depth, behavioral contract granularity, explicit test/independence architecture, validated WSL2/X11 runbook detail, requirement-level acceptance traceability and the final public-tree acceptance gate. | CLOSED / ACCEPTED |
+| `VB-CHG-027` | `v1.1.0` | Clean public repository materialized as an independent root history and statically verified against the approved public tree. | Establish the autonomous public portfolio repository without private Git ancestry while preserving exact approved content. | CLOSED / STATIC REMOTE QA PASS |
 
 ## Current Candidate Result
 
@@ -56,10 +57,12 @@ MIT_LICENSE                          = PASS / ACCEPTED
 THIRD_PARTY_NOTICE                   = PASS / ACCEPTED
 PUBLIC_BINARY_DISTRIBUTION           = N/A
 DOC_QUALITY_PARITY_AUDIT             = COMPLETE
-DOC_QUALITY_PARITY_REMEDIATION       = IMPLEMENTED / QA REQUIRED
-SOURCE_FIRST_DOC_TREE_RECONCILIATION = OPEN / APPROVAL REQUIRED AFTER QA
-SCREENSHOT_ADMISSION                 = BLOCKED UNTIL DOC QA/APPROVAL
-PUBLIC_REPOSITORY                    = NOT CREATED
+DOC_QUALITY_PARITY_REMEDIATION       = PASS / ACCEPTED
+SOURCE_FIRST_DOC_TREE_RECONCILIATION = PASS / ACCEPTED
+SCREENSHOT_ADMISSION                 = ACCEPTED / OWNER DECISION
+PUBLIC_REPOSITORY                    = PUBLISHED / CLEAN ROOT HISTORY
+INITIAL_PUBLIC_TREE_SHA              = cdeeb9f1826ba6b2289df487fbe219a90626a228
+FINAL_PUBLIC_TREE_QA                 = PARTIAL / CLEAN-CHECKOUT QA PENDING
 PUBLIC_RELEASE_READY                 = NO
 ```
 

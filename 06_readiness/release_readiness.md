@@ -3,7 +3,7 @@
 Project: **Vector Barrage**  
 Release target: `v1.1.0`  
 Publication profile: **Source-First Portfolio Repository**  
-Status: **SOURCE + LICENSING + DOCUMENTATION + SCREENSHOT EVIDENCE ACCEPTED / CLEAN PUBLIC TREE ASSEMBLY NEXT**
+Status: **PUBLIC REPOSITORY PUBLISHED / STATIC REMOTE TREE VERIFIED / CLEAN-CHECKOUT QA PENDING**
 
 ## Purpose
 
@@ -62,9 +62,9 @@ The current automated baseline supersedes earlier 108/109-test documentation-sta
 | Documentation integration | PASS / ACCEPTED | Final cross-document re-verification completed and documentation gate closed. |
 | Fresh screenshots | PRESENT / ACCEPTED BY RELEASE OWNER | Four canonical PNG files exist; independent direct visual QA was waived by release-owner decision. |
 | Screenshot identifiers | PASS | Canonical `EVD-VB-001`…`EVD-VB-004` filenames are present. |
-| Clean public repository | NOT CREATED / ASSEMBLY READY | Screenshot evidence no longer blocks assembly. |
-| Exact public-tree/source QA | UNLOCKED / NOT YET EXECUTED | Execute after clean public repository is assembled. |
-| Final public release | NOT READY | Final public-tree assembly and exact final-tree/source QA remain open. |
+| Clean public repository | PUBLISHED / STATIC REMOTE QA PASS | Independent root history published to the target repository. |
+| Exact public-tree/source QA | PARTIAL / CLEAN-CHECKOUT PENDING | Static remote structure/history checks pass; fresh-clone install/tests/source smoke remain. |
+| Final public release | NOT READY | Clean-checkout/source QA and final release decision remain open. |
 
 ## 3. Internal Windows Packaging Evidence
 
@@ -130,13 +130,13 @@ pygame==2.6.1
 
 The implementation runbook also preserves the validated explicit WSL2/X11 source profile for reproducibility/troubleshooting. It is a secondary environment profile, not a universal source requirement.
 
-The final public repository must be smoke-tested from a clean checkout after assembly.
+The final public repository must be smoke-tested from a clean checkout after publication-state synchronization.
 
 ## 6. Data / Media Readiness
 
 The public default `scores.txt` is synthetic. Visual content is generated with Pygame primitives and host-system fonts; audio is procedurally generated. No historical/course media is required by the clean public source candidate.
 
-Before publication, verify the five-record seed has not been replaced by local QA data.
+Clean-checkout QA must verify the five-record seed has not been replaced by local QA data.
 
 ## 7. License Readiness
 
@@ -195,14 +195,15 @@ Target repository:
 VictorDector/vector-barrage-python-pygame
 ```
 
-Before publication:
+Current public repository state:
 
-- assemble only artifacts allowed by the publication mask;
-- include the four admitted canonical screenshots;
-- exclude package-validation records classified as internal-only;
-- verify `scores.txt` synthetic baseline;
-- create the clean repository without unrelated/private Git history;
-- execute the Final Public Tree Acceptance Gate below.
+- only artifacts allowed by the publication mask were materialized;
+- the four admitted canonical screenshots are present;
+- package-validation records classified as internal-only are excluded;
+- `scores.txt` preserves the approved synthetic baseline;
+- the repository begins with an independent zero-parent root commit;
+- static remote-tree verification passes;
+- clean-checkout install/tests/source-smoke QA remains required by the Final Public Tree Acceptance Gate below.
 
 ## 10. Final Public Tree Acceptance Gate
 
@@ -322,9 +323,12 @@ DOCUMENTATION_GATE               = CLOSED / ACCEPTED
 SCREENSHOT_FILES                 = PRESENT / 4 OF 4
 SCREENSHOT_VISUAL_QA             = WAIVED BY RELEASE OWNER
 SCREENSHOT_ADMISSION             = ACCEPTED / OWNER DECISION
-PUBLIC_REPOSITORY                = NOT CREATED / ASSEMBLY READY
-FINAL_PUBLIC_TREE_QA             = UNLOCKED / NOT YET EXECUTED
+PUBLIC_REPOSITORY                = PUBLISHED / CLEAN ROOT HISTORY
+PUBLIC_ROOT_COMMIT               = 7d0f029d526d8b617a035aaca5abc15d94e26be9
+INITIAL_PUBLIC_TREE_SHA          = cdeeb9f1826ba6b2289df487fbe219a90626a228
+STATIC_REMOTE_TREE_QA            = PASS
+FINAL_PUBLIC_TREE_QA             = PARTIAL / CLEAN-CHECKOUT QA PENDING
 PUBLIC_RELEASE_READY             = NO
 ```
 
-There is no known application-level blocker in the accepted source. Remaining gates concern clean public-tree assembly, exact public-tree/source QA and the final release decision.
+There is no known application-level blocker in the accepted source. Clean public-tree publication and static remote verification are complete. Remaining gates are exact clean-checkout install/tests/source-smoke QA and the final release decision.

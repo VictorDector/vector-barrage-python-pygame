@@ -2,7 +2,7 @@
 
 Project: **Vector Barrage**  
 Release target: `v1.1.0`  
-Status: **SOURCE-FIRST PORTFOLIO MASK / LICENSING + DOCUMENTATION + SCREENSHOT EVIDENCE ACCEPTED / PUBLIC REPOSITORY ASSEMBLY READY**
+Status: **SOURCE-FIRST PORTFOLIO MASK / PUBLIC REPOSITORY PUBLISHED / CLEAN-CHECKOUT QA PENDING**
 
 ## Purpose
 
@@ -87,7 +87,7 @@ PLAYER_04,150
 PLAYER_05,100
 ```
 
-Before public copy, verify that no QA/manual score has replaced or modified this seed.
+The published public copy preserves the approved five-record synthetic seed; final clean-checkout QA must confirm that runtime validation does not mutate the repository baseline.
 
 ## Evidence Boundary
 
@@ -126,7 +126,7 @@ NOTICE.md                     = ACCEPTED
 VECTOR BARRAGE-OWNED MATERIAL = MIT
 PYTHON/PYGAME                 = THIRD-PARTY / OWN LICENSES
 PUBLIC BUNDLED BINARIES       = NONE
-FULL BINARY COMPLIANCE        = OPTIONAL FUTURE
+FULL_BINARY_COMPLIANCE        = OPTIONAL FUTURE
 ```
 
 ## Publication Sequence
@@ -139,8 +139,9 @@ source + engineering documentation accepted                  = COMPLETE
 -> cross-document integration correction                     = COMPLETE
 -> documentation integration QA / final acceptance           = COMPLETE
 -> screenshot admission                                      = COMPLETE / OWNER DECISION
--> clean public repository creation                          = NEXT
--> exact public-tree/source execution QA                     = LOCKED UNTIL ASSEMBLED
+-> clean public repository creation                          = COMPLETE
+-> clean root-history/static remote-tree verification        = COMPLETE / PASS
+-> exact clean-checkout/source execution QA                  = NEXT
 -> public portfolio release decision                         = LOCKED
 ```
 
@@ -156,7 +157,10 @@ FULL_BINARY_COMPLIANCE_BUNDLE  = OPTIONAL FUTURE
 DOCUMENTATION_QUALITY_PARITY   = PASS / ACCEPTED
 DOCUMENTATION_INTEGRATION      = PASS / ACCEPTED
 SCREENSHOT_ADMISSION           = ACCEPTED / OWNER DECISION
-PUBLIC_REPOSITORY_CREATED      = NO / ASSEMBLY READY
-FINAL_PUBLIC_TREE_QA           = UNLOCKED AFTER ASSEMBLY
+PUBLIC_REPOSITORY_CREATED      = YES / PUBLISHED CLEAN ROOT
+PUBLIC_ROOT_COMMIT             = 7d0f029d526d8b617a035aaca5abc15d94e26be9
+INITIAL_PUBLIC_TREE_SHA        = cdeeb9f1826ba6b2289df487fbe219a90626a228
+STATIC_REMOTE_TREE_QA          = PASS
+FINAL_PUBLIC_TREE_QA           = PARTIAL / CLEAN-CHECKOUT QA PENDING
 PUBLIC_RELEASE_READY           = NO
 ```

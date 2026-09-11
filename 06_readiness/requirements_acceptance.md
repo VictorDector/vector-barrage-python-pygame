@@ -3,7 +3,7 @@
 Project: **Vector Barrage**  
 Release target: `v1.1.0`  
 Publication profile: **Source-First Portfolio Repository**  
-Status: **SOURCE REQUIREMENTS + DOCUMENTATION + EVIDENCE ACCEPTED / PUBLIC TREE ASSEMBLY NEXT**
+Status: **SOURCE REQUIREMENTS + DOCUMENTATION + EVIDENCE ACCEPTED / PUBLIC REPOSITORY PUBLISHED / CLEAN-CHECKOUT QA PENDING**
 
 ## Purpose
 
@@ -69,7 +69,7 @@ FUNCTIONAL_ACCEPTANCE   = PASS
 | `NFR-13` | Documentation integrity | Public dossier matches current architecture, states, commands and source-first publication boundary with quality parity at least equal to the accepted baseline. | cross-version quality audit + parity remediation + cross-document integration correction + final re-verification | PASS / ACCEPTED |
 | `NFR-14` | Licensing clarity | MIT covers owned material; NOTICE separates Python/Pygame/tooling; no public binary is implied. | `LICENSE`, `NOTICE.md`, `pyproject.toml` | PASS / ACCEPTED |
 | `NFR-15` | Fresh evidence integrity | Public screenshots/validation records match the exact Vector Barrage candidate. | `EVD-VB-005/006` accepted; four canonical screenshot files present and admitted by release-owner decision; direct visual QA waived | PASS / ACCEPTED BY OWNER DECISION |
-| `NFR-16` | Clean public-tree integrity | Public repository contains only allowed source/evidence and passes clean-checkout install/tests/smoke QA. | final public-tree QA | OPEN / ASSEMBLY NEXT |
+| `NFR-16` | Clean public-tree integrity | Public repository contains only allowed source/evidence and passes clean-checkout install/tests/smoke QA. | clean root publication + final public-tree QA | PARTIAL / STATIC REMOTE QA PASS / CLEAN-CHECKOUT PENDING |
 
 Non-functional result:
 
@@ -80,7 +80,7 @@ NFR-12_PACKAGED_PERSISTENCE = PASS / INTERNAL EVIDENCE
 NFR-13_DOCUMENTATION        = PASS / ACCEPTED
 NFR-14_LICENSING            = PASS / ACCEPTED
 NFR-15_EVIDENCE             = PASS / ACCEPTED BY OWNER DECISION
-NFR-16_PUBLIC_TREE          = OPEN / ASSEMBLY NEXT
+NFR-16_PUBLIC_TREE          = PARTIAL / STATIC REMOTE QA PASS / CLEAN-CHECKOUT PENDING
 ```
 
 ## 4. Validation-Level Coverage
@@ -93,7 +93,7 @@ NFR-16_PUBLIC_TREE          = OPEN / ASSEMBLY NEXT
 | `V4` GUI_AUDIO | integrated source application and procedural media | PASS |
 | `V5` INTEGRATION | navigation, game result, record flow and persistence orchestration | PASS |
 | `V6` PACKAGED_RUNTIME | hardened Windows package | PASS / INTERNAL EVIDENCE |
-| `V7` PUBLICATION | exact public repository + admitted evidence + clean-checkout QA | OPEN / ASSEMBLY NEXT |
+| `V7` PUBLICATION | exact public repository + admitted evidence + clean-checkout QA | PARTIAL / STATIC REMOTE QA PASS / CLEAN-CHECKOUT PENDING |
 
 Automated success does not replace GUI/audio observation. Source runtime success does not establish packaged-runtime success. Packaged-runtime success does not authorize public binary distribution. Screenshot admission by owner decision does not imply that independent direct visual QA was performed.
 
@@ -132,8 +132,9 @@ NFR-15
 -> direct visual QA WAIVED, not represented as PASS
 
 NFR-16
--> clean public repository assembly NEXT
--> exact public-tree/source QA after assembly
+-> clean public repository published with independent root history
+-> static remote-tree verification PASS
+-> exact clean-checkout/source QA NEXT
 ```
 
 ## 6. Packaging Engineering Evidence
@@ -165,8 +166,8 @@ This evidence supports `NFR-11`/`NFR-12`; it does not create a public executable
 | Documentation integration | PASS / ACCEPTED | Corrected integration state passed targeted re-verification and the documentation gate is closed. |
 | Screenshot evidence | PRESENT / ACCEPTED BY RELEASE OWNER | Four canonical PNG files are admitted; direct independent visual QA was waived. |
 | Screenshot ID/filename normalization | PASS | `EVD-VB-001` through `EVD-VB-004` canonical filenames are present. |
-| Clean public repository | NOT CREATED / ASSEMBLY NEXT | Target `VictorDector/vector-barrage-python-pygame`. |
-| Clean-checkout install/tests/smoke | LOCKED UNTIL ASSEMBLED | Run against the exact clean public tree. |
+| Clean public repository | PUBLISHED / STATIC REMOTE QA PASS | Target `VictorDector/vector-barrage-python-pygame`; root commit has zero parents. |
+| Clean-checkout install/tests/smoke | PENDING / NEXT | Run against the exact published public repository state after documentation-state synchronization. |
 
 ## 8. Publication Profile Decision
 
@@ -193,10 +194,10 @@ DOCUMENTATION_QUALITY_PARITY        = PASS / ACCEPTED
 DOCUMENTATION_INTEGRATION           = PASS / ACCEPTED
 SCREENSHOT_ADMISSION                = ACCEPTED / OWNER DECISION
 SCREENSHOT_VISUAL_QA                = WAIVED
-PUBLIC_TREE_QA                      = UNLOCKED AFTER ASSEMBLY
-PUBLIC_REPOSITORY                   = NOT CREATED / ASSEMBLY NEXT
+PUBLIC_TREE_QA                      = PARTIAL / STATIC REMOTE QA PASS / CLEAN-CHECKOUT PENDING
+PUBLIC_REPOSITORY                   = PUBLISHED / CLEAN ROOT HISTORY
 PUBLIC_BINARY_DISTRIBUTION          = N/A
 PUBLIC_RELEASE_READY                = NO
 ```
 
-The implemented product, documentation and admitted evidence are accepted within the current source-first scope. Final public release acceptance remains intentionally open until the clean public tree is assembled and the exact clean-checkout/public-tree QA passes.
+The implemented product, documentation and admitted evidence are accepted within the current source-first scope. The clean public repository is published with independent root history and has passed static remote-tree verification. Final public release acceptance remains intentionally open until exact clean-checkout install/tests/source-smoke QA passes.

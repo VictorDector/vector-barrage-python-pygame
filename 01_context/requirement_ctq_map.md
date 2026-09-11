@@ -41,10 +41,10 @@ Map product requirements to critical-to-quality (CTQ) criteria, implementation s
 | `NFR-10` | Source GUI operability. | Integrated application renders/responds in documented graphical source profile. | source runtime validation | PASS |
 | `NFR-11` | Optional Windows packaging capability. | Hardened package builds and preserves accepted behavior. | native build + packaged runtime | PASS / INTERNAL EVIDENCE |
 | `NFR-12` | Optional packaged persistence. | First-run score initialization and complete relaunch persistence work. | isolated packaged QA | PASS / INTERNAL EVIDENCE |
-| `NFR-13` | Documentation integrity. | Public dossier matches current architecture, status, commands and source-first publication boundary while preserving or improving the accepted documentation-quality baseline. | cross-version quality audit + targeted parity remediation + integration correction | REMEDIATION IMPLEMENTED / INTEGRATION QA REQUIRED |
+| `NFR-13` | Documentation integrity. | Public dossier matches current architecture, status, commands and source-first publication boundary while preserving or improving the accepted documentation-quality baseline. | cross-version quality audit + targeted parity remediation + integration correction + final re-verification | PASS / ACCEPTED |
 | `NFR-14` | Licensing clarity. | MIT covers owned material; NOTICE separates Python/Pygame/tooling; no public binary implied. | `LICENSE`, `NOTICE.md`, `pyproject.toml` | PASS / ACCEPTED |
-| `NFR-15` | Fresh evidence integrity. | Public screenshots/validation records match the exact Vector Barrage candidate. | `evidence/` | PARTIAL — SCREENSHOTS QA PENDING / BLOCKED BY DOC GATE |
-| `NFR-16` | Clean public-tree integrity. | Public repository contains only allowed source/evidence and passes clean-checkout install/tests/smoke QA. | final public-tree QA | LOCKED |
+| `NFR-15` | Fresh evidence integrity. | Public screenshots/validation records match the exact Vector Barrage candidate. | `evidence/` | PASS / ACCEPTED BY OWNER DECISION |
+| `NFR-16` | Clean public-tree integrity. | Public repository contains only allowed source/evidence and passes clean-checkout install/tests/smoke QA. | published clean root + final public-tree QA | PARTIAL / STATIC REMOTE QA PASS / CLEAN-CHECKOUT PENDING |
 
 ## CTQ Claim Rules
 
@@ -54,7 +54,7 @@ Map product requirements to critical-to-quality (CTQ) criteria, implementation s
 - Historical evidence from another implementation cannot satisfy Vector Barrage evidence requirements.
 - Public screenshot claims require visual admission.
 - Current publication claims must match the source-first profile.
-- Documentation states must remain synchronized across context, solution, readiness and evidence surfaces before screenshot admission unlocks.
+- Documentation states must remain synchronized across context, solution, readiness and evidence surfaces through final publication QA.
 
 ## Evidence Mapping
 
@@ -63,10 +63,10 @@ Map product requirements to critical-to-quality (CTQ) criteria, implementation s
 | `FR-01`–`FR-11` | current automated suite + accepted integrated source execution |
 | `NFR-01`–`NFR-10` | metadata, source tree, `125 PASS`, runtime and isolated source-persistence checks |
 | `NFR-11`–`NFR-12` | hardened Windows package QA / INTERNAL EVIDENCE |
-| `NFR-13` | documentation-quality audit complete; six-document parity remediation implemented; cross-document integration correction implemented; integration QA still required |
+| `NFR-13` | documentation-quality audit complete; six-document parity remediation accepted; cross-document integration correction and final re-verification PASS |
 | `NFR-14` | MIT `LICENSE` + concise `NOTICE.md` / ACCEPTED |
-| `NFR-15` | source evidence accepted; four screenshots captured but not yet admitted; evidence gate blocked until documentation gate closes |
-| `NFR-16` | pending clean public-repository assembly |
+| `NFR-15` | source evidence accepted; four canonical screenshots admitted by release-owner decision; direct visual QA waived |
+| `NFR-16` | public clean root published and statically verified; clean-checkout install/tests/smoke QA pending |
 
 ## Current Acceptance Summary
 
@@ -78,10 +78,11 @@ SOURCE_INTEGRATED_RUNTIME           = PASS
 SOURCE_RELAUNCH_PERSISTENCE         = PASS
 PACKAGING_CAPABILITY                = PASS / INTERNAL EVIDENCE
 LICENSE_READINESS                   = PASS / SOURCE-FIRST PROFILE
-DOCUMENTATION_QUALITY_PARITY        = REMEDIATION IMPLEMENTED
-DOCUMENTATION_INTEGRATION           = CORRECTION IMPLEMENTED / QA REQUIRED
-SCREENSHOT_ADMISSION                = BLOCKED UNTIL DOCUMENTATION GATE CLOSES
-PUBLIC_TREE_QA                      = LOCKED
+DOCUMENTATION_QUALITY_PARITY        = PASS / ACCEPTED
+DOCUMENTATION_INTEGRATION           = PASS / ACCEPTED
+SCREENSHOT_ADMISSION                = ACCEPTED / OWNER DECISION
+PUBLIC_REPOSITORY                   = PUBLISHED / CLEAN ROOT HISTORY
+PUBLIC_TREE_QA                      = PARTIAL / CLEAN-CHECKOUT QA PENDING
 PUBLIC_BINARY_DISTRIBUTION          = N/A
 FINAL_PUBLICATION_ACCEPTANCE        = OPEN
 ```

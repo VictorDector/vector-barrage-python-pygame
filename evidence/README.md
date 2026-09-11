@@ -104,8 +104,11 @@ SCREENSHOT_ADMISSION           = ACCEPTED / OWNER DECISION
 PACKAGED_EVIDENCE              = INTERNAL ONLY
 PUBLIC_BINARY_EVIDENCE_CLAIM   = NO DISTRIBUTED BINARY
 PUBLIC_EVIDENCE_SET_COMPLETE   = YES
+PUBLIC_REPOSITORY              = PUBLISHED / CLEAN ROOT HISTORY
+STATIC_REMOTE_TREE_QA          = PASS
+FINAL_PUBLIC_TREE_QA           = PARTIAL / CLEAN-CHECKOUT QA PENDING
 ```
 
 ## Next Evidence Gate
 
-The screenshot evidence gate is closed by release-owner acceptance. The next release activity is clean public-tree assembly, followed by exact final public-tree/source QA.
+The screenshot evidence gate is closed by release-owner acceptance. Clean public-tree publication and static remote-tree verification are complete. The next release activity is exact clean-checkout install/tests/source-smoke QA against the published repository.

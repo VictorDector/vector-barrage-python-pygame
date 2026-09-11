@@ -4,7 +4,7 @@ Project: **Vector Barrage**
 Repository target: `VictorDector/vector-barrage-python-pygame`  
 Release target: `v1.1.0`  
 Publication profile: **Source-First Portfolio Repository**  
-Current status: **PUBLIC CANDIDATE — DOCUMENTATION ACCEPTED / SCREENSHOT EVIDENCE ACCEPTED BY RELEASE OWNER / CLEAN PUBLIC TREE ASSEMBLY READY**
+Current status: **PUBLIC REPOSITORY PUBLISHED / STATIC REMOTE TREE VERIFIED / CLEAN-CHECKOUT QA PENDING**
 
 ## Current Capability State
 
@@ -35,7 +35,8 @@ Current status: **PUBLIC CANDIDATE — DOCUMENTATION ACCEPTED / SCREENSHOT EVIDE
 | Historical/root screenshots | EXCLUDE / NOT VALID VECTOR BARRAGE EVIDENCE | Root-level historical screenshots remain outside the independent public candidate. |
 | Public executable download | N/A / EXCLUDED | No `VectorBarrage.exe` public asset. |
 | Full binary compliance | OPTIONAL FUTURE | Reactivate only if executable distribution is proposed. |
-| Clean public repository | NOT CREATED / ASSEMBLY READY | Screenshot evidence no longer blocks clean public-tree assembly. |
+| Clean public repository | PUBLISHED / STATIC REMOTE QA PASS | Public root commit `7d0f029d526d8b617a035aaca5abc15d94e26be9`; initial published tree `cdeeb9f1826ba6b2289df487fbe219a90626a228`. |
+| Public Git history | PASS / CLEAN ROOT | Root commit has zero parents; unrelated/private repository ancestry is absent. |
 
 ## Documentation Integrity State
 
@@ -140,7 +141,9 @@ DOCUMENTATION_GATE                   = CLOSED / ACCEPTED
 SCREENSHOT_FILES_IN_CANDIDATE        = PRESENT / 4 OF 4
 SCREENSHOT_VISUAL_QA                 = WAIVED BY RELEASE OWNER
 SCREENSHOT_ADMISSION                 = ACCEPTED / OWNER DECISION
-FINAL_PUBLIC_TREE_QA                 = UNLOCKED / NOT YET EXECUTED
+PUBLIC_REPOSITORY                    = PUBLISHED / CLEAN ROOT HISTORY
+STATIC_REMOTE_TREE_QA                = PASS
+FINAL_PUBLIC_TREE_QA                 = PARTIAL / CLEAN-CHECKOUT QA PENDING
 PUBLIC_RELEASE_READY                 = NO
 ```
 
@@ -162,9 +165,10 @@ MATCHING VECTOR BARRAGE SOURCE RUNTIME = PASS
 DOCUMENTATION GATE                     = CLOSED / ACCEPTED
 SCREENSHOT FILE PRESENCE               = PASS / 4 OF 4
 SCREENSHOT ADMISSION                   = ACCEPTED / OWNER DECISION
--> clean public-tree assembly
--> final public-tree/source QA
--> release-readiness decision
+-> public repository = PUBLISHED / CLEAN ROOT HISTORY
+-> static remote-tree QA = PASS
+-> clean-checkout/source QA = NEXT
+-> final release decision
 ```
 
 ## No-Loss Boundary
@@ -190,11 +194,13 @@ HARDENED_ARTIFACT_IDENTITY         = PASS / EXACT MATCH
 SCREENSHOT_EVIDENCE                = PRESENT / ACCEPTED BY RELEASE OWNER
 SCREENSHOT_VISUAL_QA               = WAIVED
 SCREENSHOT_ADMISSION               = ACCEPTED
-CLEAN_PUBLIC_REPOSITORY            = NOT CREATED / ASSEMBLY READY
-FINAL_PUBLIC_TREE_QA               = UNLOCKED / NOT YET EXECUTED
+CLEAN_PUBLIC_REPOSITORY            = PUBLISHED / STATIC REMOTE QA PASS
+PUBLIC_ROOT_COMMIT                 = 7d0f029d526d8b617a035aaca5abc15d94e26be9
+INITIAL_PUBLIC_TREE_SHA            = cdeeb9f1826ba6b2289df487fbe219a90626a228
+FINAL_PUBLIC_TREE_QA               = PARTIAL / CLEAN-CHECKOUT QA PENDING
 PUBLIC_RELEASE_READY               = NO
 ```
 
 ## Next Product Step
 
-Assemble the clean public repository tree for `VictorDector/vector-barrage-python-pygame` using only artifacts allowed by the source-first publication mask, then execute the Final Public Tree Acceptance Gate against that exact assembled tree.
+Execute clean-checkout reproducibility QA against the published `VictorDector/vector-barrage-python-pygame` repository: clone the exact public state into an isolated temporary checkout, install under Python 3.13, verify package import, run the full regression suite, execute source smoke validation, then complete the final release-readiness decision.

@@ -17,8 +17,10 @@ MIT license                    = PRESENT
 Third-party notice             = PRESENT
 Windows packaged QA            = PASS / INTERNAL ENGINEERING EVIDENCE
 Public executable download     = NO
-Screenshot admission           = PENDING
-Public repository              = NOT YET CREATED
+Screenshot admission           = ACCEPTED / OWNER DECISION
+Public repository              = PUBLISHED / CLEAN ROOT HISTORY
+Final public-tree QA           = PARTIAL / CLEAN-CHECKOUT QA PENDING
+Public release ready           = NO
 ```
 
 The source candidate and its automated test suite are accepted. A hardened Windows package was also built and validated internally as engineering evidence, but the executable is not part of the public distribution boundary.
@@ -207,7 +209,7 @@ That work demonstrates packaging capability, but **the compiled executable is no
 
 ## Evidence
 
-`evidence/README.md` defines the evidence/claim boundary. Source-runtime and source-persistence evidence are accepted. Four application screenshots have been captured but remain subject to visual admission before they are used as public portfolio evidence.
+`evidence/README.md` defines the evidence/claim boundary. Source-runtime and source-persistence evidence are accepted. Four canonical application screenshots are published as owner-accepted public evidence. Direct independent visual QA was waived by the release owner and is not represented as a visual-QA PASS.
 
 ## License and Third-Party Software
 
