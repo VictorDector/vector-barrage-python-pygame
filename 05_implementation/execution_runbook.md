@@ -305,10 +305,14 @@ A missing/unusable mixer device should be treated as an environment/audio-output
 Permitted current engineering claims include:
 
 - source implementation accepted;
-- current automated regression baseline is 125 PASS;
-- application runtime/persistence behavior has been validated;
-- a reproducible WSL2/X11 source profile is documented;
-- a hardened Windows package was built and validated internally;
-- no public executable is distributed under the current profile.
+- current automated regression baseline is `125 PASS`;
+- exact published source-tree clean-checkout QA accepted;
+- source runtime/persistence behavior validated;
+- reproducible standard and WSL2/X11 source paths documented;
+- hardened Windows package built and validated internally;
+- no public executable distributed under the current profile;
+- screenshot set accepted by release-owner decision with independent direct visual QA explicitly not claimed;
+- `EVD-VB-004` retained as the accepted pre-fix About reference;
+- corrected final About layout verified by the release owner, with screenshot replacement waived.
 
-Do not claim screenshot evidence is accepted until visual admission closes, and do not imply an executable download exists.
+Do not imply that `EVD-VB-004` is an exact image of the final About layout, and do not imply an executable download exists.

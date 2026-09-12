@@ -25,18 +25,21 @@ DOCUMENTATION_GATE            = CLOSED / ACCEPTED
 SCREENSHOT_FILES              = PRESENT / 4 OF 4
 SCREENSHOT_VISUAL_QA          = WAIVED BY RELEASE OWNER
 SCREENSHOT_ADMISSION          = ACCEPTED / OWNER DECISION
+EVD-VB-004                    = PRE-FIX REFERENCE / REPLACEMENT WAIVED
+ABOUT_LAYOUT_FINAL            = PASS / OWNER VERIFIED
+FINAL_PUBLIC_TREE_QA          = PASS / ACCEPTED
 ```
 
-The current automated baseline supersedes earlier 108/109-test documentation-stage snapshots. Those historical results remain valid for their original checkpoints but do not define the final source candidate.
+The current automated baseline supersedes earlier 108/109-test documentation-stage snapshots. Those historical results remain valid for their original checkpoints but do not define the final source release.
 
 ## Public Evidence Set
 
 | Evidence ID | Evidence | Status | Public disposition |
 |---|---|---|---|
-| `EVD-VB-001` | Main Menu screenshot | PRESENT / ACCEPTED | Public screenshot evidence; direct visual QA not independently performed |
-| `EVD-VB-002` | Gameplay/HUD screenshot | PRESENT / ACCEPTED | Public screenshot evidence; direct visual QA not independently performed |
-| `EVD-VB-003` | Scores screenshot | PRESENT / ACCEPTED | Public screenshot evidence; direct visual QA not independently performed |
-| `EVD-VB-004` | About screenshot | PRESENT / ACCEPTED | Public screenshot evidence; direct visual QA not independently performed |
+| `EVD-VB-001` | Main Menu screenshot | PRESENT / ACCEPTED | Current visual reference; independent direct visual QA not claimed |
+| `EVD-VB-002` | Gameplay/HUD screenshot | PRESENT / ACCEPTED | Current visual reference; independent direct visual QA not claimed |
+| `EVD-VB-003` | Scores screenshot | PRESENT / ACCEPTED | Current visual reference; independent direct visual QA not claimed |
+| `EVD-VB-004` | About screenshot | PRESENT / ACCEPTED / PRE-FIX REFERENCE | Captured before the final responsive About-layout correction; replacement explicitly waived by release owner; not exact final-layout evidence |
 | `EVD-VB-005` | Source runtime validation | PASS / FORMALIZED | Public engineering evidence |
 | `EVD-VB-006` | Source persistence/relaunch validation | PASS / FORMALIZED | Public engineering evidence |
 
@@ -59,7 +62,7 @@ Staging records `EVD-VB-007` and `EVD-VB-008`, where present, are classified as 
 
 ## Screenshot Evidence Boundary
 
-The candidate contains the four canonical files:
+The public repository contains the four canonical files:
 
 ```text
 evidence/screenshots/EVD-VB-001_main_menu.png
@@ -79,13 +82,16 @@ DIRECT_VISUAL_QA       = WAIVED BY RELEASE OWNER
 SCREENSHOT_ADMISSION   = ACCEPTED / OWNER DECISION
 ```
 
-The four screenshots are therefore admitted for the public source-first evidence set by release-owner decision. This must not be represented as an independent direct visual-QA PASS.
+The final About layout was subsequently corrected and verified by the release owner. `EVD-VB-004` was intentionally retained rather than refreshed. Its accepted claim boundary is therefore historical/pre-fix visual reference only.
+
+The four screenshots are admitted for the public source-first evidence set by release-owner decision. This must not be represented as an independent direct visual-QA PASS.
 
 ## Claim Rules
 
-- Screenshot evidence may be presented as accepted public evidence.
+- Screenshot evidence may be presented as accepted public evidence within its declared claim boundary.
 - Do not claim that independent direct visual QA was performed; that check was waived by the release owner.
-- Do not publish historical/private screenshots as Vector Barrage evidence.
+- `EVD-VB-004` must not be represented as exact final-layout evidence.
+- Do not publish historical/private screenshots as current Vector Barrage evidence unless explicitly dispositioned.
 - Do not present the internally validated Windows executable as a downloadable public artifact.
 - Source claims must match the public source snapshot and current automated baseline.
 - Earlier package hashes and superseded package experiments remain historical/internal and must not be presented as the current public artifact.
@@ -101,14 +107,18 @@ DOCUMENTATION_GATE             = CLOSED / ACCEPTED
 SCREENSHOT_FILES               = PRESENT / 4 OF 4
 SCREENSHOT_VISUAL_QA           = WAIVED BY RELEASE OWNER
 SCREENSHOT_ADMISSION           = ACCEPTED / OWNER DECISION
+EVD-VB-004                     = PRE-FIX REFERENCE / REPLACEMENT WAIVED
+ABOUT_LAYOUT_FINAL             = PASS / OWNER VERIFIED
 PACKAGED_EVIDENCE              = INTERNAL ONLY
 PUBLIC_BINARY_EVIDENCE_CLAIM   = NO DISTRIBUTED BINARY
 PUBLIC_EVIDENCE_SET_COMPLETE   = YES
 PUBLIC_REPOSITORY              = PUBLISHED / CLEAN ROOT HISTORY
-STATIC_REMOTE_TREE_QA          = PASS
-FINAL_PUBLIC_TREE_QA           = PARTIAL / CLEAN-CHECKOUT QA PENDING
+FINAL_PUBLIC_TREE_QA           = PASS / ACCEPTED
+DOCUMENTATION_RECONCILIATION   = PASS / ACCEPTED
+PUBLIC_RELEASE_READY           = YES
+TAG_v1.1.0                     = PENDING
 ```
 
 ## Next Evidence Gate
 
-The screenshot evidence gate is closed by release-owner acceptance. Clean public-tree publication and static remote-tree verification are complete. The next release activity is exact clean-checkout install/tests/source-smoke QA against the published repository.
+No evidence gate remains open for the current source-first release profile. The next release action is creation and verification of the `v1.1.0` tag after the documentation reconciliation commit is remotely verified.

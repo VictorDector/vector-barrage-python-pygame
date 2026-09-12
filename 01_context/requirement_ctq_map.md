@@ -41,10 +41,10 @@ Map product requirements to critical-to-quality (CTQ) criteria, implementation s
 | `NFR-10` | Source GUI operability. | Integrated application renders/responds in documented graphical source profile. | source runtime validation | PASS |
 | `NFR-11` | Optional Windows packaging capability. | Hardened package builds and preserves accepted behavior. | native build + packaged runtime | PASS / INTERNAL EVIDENCE |
 | `NFR-12` | Optional packaged persistence. | First-run score initialization and complete relaunch persistence work. | isolated packaged QA | PASS / INTERNAL EVIDENCE |
-| `NFR-13` | Documentation integrity. | Public dossier matches current architecture, status, commands and source-first publication boundary while preserving or improving the accepted documentation-quality baseline. | cross-version quality audit + targeted parity remediation + integration correction + final re-verification | PASS / ACCEPTED |
+| `NFR-13` | Documentation integrity. | Public dossier matches current architecture, status, commands and source-first publication boundary while preserving or improving the accepted documentation-quality baseline. | cross-version quality audit + targeted parity remediation + integration correction + final reconciliation | PASS / ACCEPTED |
 | `NFR-14` | Licensing clarity. | MIT covers owned material; NOTICE separates Python/Pygame/tooling; no public binary implied. | `LICENSE`, `NOTICE.md`, `pyproject.toml` | PASS / ACCEPTED |
-| `NFR-15` | Fresh evidence integrity. | Public screenshots/validation records match the exact Vector Barrage candidate. | `evidence/` | PASS / ACCEPTED BY OWNER DECISION |
-| `NFR-16` | Clean public-tree integrity. | Public repository contains only allowed source/evidence and passes clean-checkout install/tests/smoke QA. | published clean root + final public-tree QA | PARTIAL / STATIC REMOTE QA PASS / CLEAN-CHECKOUT PENDING |
+| `NFR-15` | Public evidence integrity. | Public validation records must match the supported claim boundary. Screenshots must be current for their claimed visual surface or carry an explicit controlled historical/reference disposition. | `EVD-VB-001..003` current references; `EVD-VB-004` accepted pre-fix reference with replacement waived; final About layout owner-verified; `EVD-VB-005/006` accepted source evidence. | PASS / CONTROLLED EVIDENCE EXCEPTION |
+| `NFR-16` | Clean public-tree integrity. | Public repository contains only allowed source/evidence and passes clean-checkout install/tests/smoke QA. | independent clean root + exact public-tree clean-checkout/install/import/125-test/public-seed/worktree QA | PASS / FINAL EXACT-TREE QA ACCEPTED |
 
 ## CTQ Claim Rules
 
@@ -53,8 +53,9 @@ Map product requirements to critical-to-quality (CTQ) criteria, implementation s
 - Packaged-runtime PASS does not imply public binary distribution.
 - Historical evidence from another implementation cannot satisfy Vector Barrage evidence requirements.
 - Public screenshot claims require visual admission.
+- A screenshot intentionally retained under an explicit replacement waiver may support only the bounded historical/reference claim assigned to it; it may not be used as evidence of exact final visual equivalence.
 - Current publication claims must match the source-first profile.
-- Documentation states must remain synchronized across context, solution, readiness and evidence surfaces through final publication QA.
+- Documentation states must remain synchronized across context, solution, readiness and evidence surfaces.
 
 ## Evidence Mapping
 
@@ -63,10 +64,10 @@ Map product requirements to critical-to-quality (CTQ) criteria, implementation s
 | `FR-01`–`FR-11` | current automated suite + accepted integrated source execution |
 | `NFR-01`–`NFR-10` | metadata, source tree, `125 PASS`, runtime and isolated source-persistence checks |
 | `NFR-11`–`NFR-12` | hardened Windows package QA / INTERNAL EVIDENCE |
-| `NFR-13` | documentation-quality audit complete; six-document parity remediation accepted; cross-document integration correction and final re-verification PASS |
+| `NFR-13` | documentation-quality audit + parity remediation + cross-document integration + final reconciliation |
 | `NFR-14` | MIT `LICENSE` + concise `NOTICE.md` / ACCEPTED |
-| `NFR-15` | source evidence accepted; four canonical screenshots admitted by release-owner decision; direct visual QA waived |
-| `NFR-16` | public clean root published and statically verified; clean-checkout install/tests/smoke QA pending |
+| `NFR-15` | `EVD-VB-001..003` current references; `EVD-VB-004` pre-fix reference under explicit replacement waiver; `EVD-VB-005/006` source validation; final About layout owner-verified |
+| `NFR-16` | public clean root + exact public source snapshot clean-checkout install/import/125-test/public-seed/worktree QA PASS |
 
 ## Current Acceptance Summary
 
@@ -81,10 +82,12 @@ LICENSE_READINESS                   = PASS / SOURCE-FIRST PROFILE
 DOCUMENTATION_QUALITY_PARITY        = PASS / ACCEPTED
 DOCUMENTATION_INTEGRATION           = PASS / ACCEPTED
 SCREENSHOT_ADMISSION                = ACCEPTED / OWNER DECISION
+EVD-VB-004                          = PRE-FIX REFERENCE / REPLACEMENT WAIVED
+ABOUT_LAYOUT_FINAL                  = PASS / OWNER VERIFIED
 PUBLIC_REPOSITORY                   = PUBLISHED / CLEAN ROOT HISTORY
-PUBLIC_TREE_QA                      = PARTIAL / CLEAN-CHECKOUT QA PENDING
+PUBLIC_TREE_QA                      = PASS / ACCEPTED
 PUBLIC_BINARY_DISTRIBUTION          = N/A
-FINAL_PUBLICATION_ACCEPTANCE        = OPEN
+FINAL_PUBLICATION_ACCEPTANCE        = READY / TAG PENDING
 ```
 
-Final publication acceptance remains in `06_readiness/requirements_acceptance.md` and `release_readiness.md`; this file defines the requirement/CTQ baseline rather than the final release decision.
+Final release authorization remains in `06_readiness/requirements_acceptance.md` and `release_readiness.md`; this file defines the requirement/CTQ baseline rather than the tag operation itself.

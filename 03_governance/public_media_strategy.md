@@ -92,7 +92,8 @@ Completed validation includes:
 - new-record flow exercised;
 - source application remained functional using generated media;
 - matching Windows source runtime reconfirmed with Python `3.13.15` and Pygame `2.6.1`;
-- hardened Windows package preserved generated visual/audio behavior in packaged runtime QA.
+- hardened Windows package preserved generated visual/audio behavior in packaged runtime QA;
+- final responsive About layout verified by the release owner.
 
 Current automated regression baseline:
 
@@ -101,8 +102,6 @@ Current automated regression baseline:
 ```
 
 Historical `108`/`109` results are superseded checkpoints.
-
-Fresh public screenshot evidence is now physically present under the canonical filenames. File presence, naming, PNG structure and resolution consistency were verified. Direct visual inspection was waived by the release owner, so screenshot acceptance must not be described as an independent visual-QA PASS.
 
 ## Screenshot Publication Boundary
 
@@ -118,13 +117,20 @@ evidence/screenshots/EVD-VB-004_about.png
 Current disposition:
 
 ```text
-SCREENSHOT_FILES           = PRESENT / 4 OF 4
-CANONICAL_FILENAMES        = PASS
-PNG_STRUCTURE              = PASS
-RESOLUTION_CONSISTENCY     = PASS
-DIRECT_VISUAL_QA           = WAIVED BY RELEASE OWNER
-SCREENSHOT_ADMISSION       = ACCEPTED / OWNER DECISION
+EVD-VB-001                = ACCEPTED / CURRENT REFERENCE
+EVD-VB-002                = ACCEPTED / CURRENT REFERENCE
+EVD-VB-003                = ACCEPTED / CURRENT REFERENCE
+EVD-VB-004                = ACCEPTED / PRE-FIX REFERENCE / REPLACEMENT WAIVED
+PHYSICAL_FILE_PRESENCE    = PASS / 4 OF 4
+CANONICAL_FILENAMES       = PASS
+PNG_STRUCTURE             = PASS
+RESOLUTION_CONSISTENCY    = PASS
+DIRECT_VISUAL_QA          = WAIVED BY RELEASE OWNER
+SCREENSHOT_ADMISSION      = ACCEPTED / OWNER DECISION
+ABOUT_LAYOUT_FINAL        = PASS / OWNER VERIFIED
 ```
+
+The About screen received a subsequent responsive-layout correction after `EVD-VB-004` was captured. The release owner verified the corrected final About layout and explicitly waived screenshot replacement. `EVD-VB-004` therefore remains admissible only as the preserved pre-fix reference and must not be described as an exact image of the final layout.
 
 The screenshots may be published as accepted evidence under this release decision, but they must not be described as independently visually reviewed.
 
@@ -157,7 +163,9 @@ SOURCE_AUDIO_RUNTIME           = PASS
 WINDOWS_SOURCE_RUNTIME         = PASS / RECONFIRMED
 AUTOMATED_REGRESSION           = 125 PASS
 PACKAGED_MEDIA_RUNTIME         = PASS / INTERNAL ENGINEERING EVIDENCE
-FRESH_PUBLIC_SCREENSHOTS       = PRESENT / ACCEPTED
+FRESH_PUBLIC_SCREENSHOTS       = EVD-VB-001..003 CURRENT
+EVD-VB-004                     = PRE-FIX REFERENCE / REPLACEMENT WAIVED
+ABOUT_LAYOUT_FINAL             = PASS / OWNER VERIFIED
 SCREENSHOT_VISUAL_QA           = WAIVED BY RELEASE OWNER
 SCREENSHOT_ADMISSION           = ACCEPTED / OWNER DECISION
 PUBLIC_EXECUTABLE_DOWNLOAD     = NO

@@ -4,15 +4,17 @@ Project: **Vector Barrage**
 Repository target: `VictorDector/vector-barrage-python-pygame`  
 Release target: `v1.1.0`  
 Publication profile: **Source-First Portfolio Repository**  
-Current status: **PUBLIC REPOSITORY PUBLISHED / STATIC REMOTE TREE VERIFIED / CLEAN-CHECKOUT QA PENDING**
+Current status: **PUBLIC REPOSITORY PUBLISHED / FINAL PUBLIC-TREE QA PASS / RELEASE READY — TAG PENDING**
 
 ## Current Capability State
 
 | Area | Status | Evidence / Boundary |
 |---|---|---|
 | Product/source implementation | PASS / ACCEPTED | Independently implemented public candidate. |
+| Package/runtime version | PASS / `1.1.0` | Stable release version is canonical in `pyproject.toml` and runtime metadata. |
 | Automated regression | PASS / 125 | Current accepted baseline; earlier 108/109 results are historical checkpoints. |
 | Source runtime/persistence | PASS / ACCEPTED | Source GUI/audio and complete-relaunch persistence accepted. |
+| Final public-tree/source QA | PASS / ACCEPTED | Exact published source snapshot completed clean-checkout install, import, 125-test regression, public-seed and clean-worktree verification. |
 | Windows source runtime recovery | PASS / RECONFIRMED | Matching native Windows workspace imports `vector_barrage`, reports Pygame `2.6.1`, and displays the game window successfully under Python `3.13.15`. |
 | System-font boundary | PASS / ACCEPTED | Approved host-system font resolver implemented. |
 | Controlled packaging configuration | PASS / ACCEPTED | `VectorBarrage.spec`, launcher and Pygame hook retained as engineering source. |
@@ -23,19 +25,21 @@ Current status: **PUBLIC REPOSITORY PUBLISHED / STATIC REMOTE TREE VERIFIED / CL
 | Third-party notice | PASS / ACCEPTED | Python/Pygame/tooling retain their own licenses; no bundled public executable. |
 | Documentation quality benchmark | COMPLETE | First-version engineering dossier used as the accepted quality benchmark rather than a file-for-file template. |
 | Documentation quality parity | PASS / ACCEPTED | Targeted remediation restored or improved the required documentation depth. |
-| Documentation integration | PASS / ACCEPTED | Final cross-document re-verification completed without residual material state drift. |
-| Documentation gate | CLOSED / ACCEPTED | Documentation dossier accepted before evidence admission. |
+| Documentation integration | PASS / ACCEPTED | Cross-document reconciliation completed without residual material state drift. |
+| Documentation gate | CLOSED / ACCEPTED | Current public dossier satisfies the source-first profile. |
 | Synthetic score seed | PASS | Five `PLAYER_XX` records verified. |
 | Source evidence `EVD-VB-005/006` | PASS / PUBLIC ENGINEERING EVIDENCE | Current source/runtime and persistence claims preserved. |
-| Packaged evidence `EVD-VB-007/008` | INTERNAL / EXCLUDE FROM FINAL PUBLIC COPY | Preserved in private staging only. |
+| Packaged evidence `EVD-VB-007/008` | INTERNAL / EXCLUDE FROM PUBLIC COPY | Preserved in private staging only. |
 | Screenshot directory | PRESENT | `evidence/screenshots/` exists in the public candidate. |
-| Fresh Vector Barrage screenshots | PRESENT / ACCEPTED BY RELEASE OWNER | Four canonical PNG files are physically present and structurally verified. |
+| Screenshots `EVD-VB-001..003` | PRESENT / ACCEPTED / CURRENT REFERENCES | Owner-accepted public evidence; independent direct visual QA not claimed. |
+| `EVD-VB-004` About screenshot | ACCEPTED / PRE-FIX REFERENCE | Captured before the final responsive About-layout correction; replacement waived by release owner. |
+| Final About layout | PASS / OWNER VERIFIED | Responsive About correction verified after the screenshot was captured. |
 | Screenshot visual QA | WAIVED BY RELEASE OWNER | Direct independent visual inspection was not executed; this must not be represented as a visual-QA PASS. |
-| Screenshot admission | ACCEPTED / OWNER DECISION | Evidence is admitted for publication based on release-owner acceptance plus verified file presence, canonical naming and PNG structure. |
+| Screenshot admission | ACCEPTED / OWNER DECISION | Evidence admitted under the bounded claim rules above. |
 | Historical/root screenshots | EXCLUDE / NOT VALID VECTOR BARRAGE EVIDENCE | Root-level historical screenshots remain outside the independent public candidate. |
 | Public executable download | N/A / EXCLUDED | No `VectorBarrage.exe` public asset. |
 | Full binary compliance | OPTIONAL FUTURE | Reactivate only if executable distribution is proposed. |
-| Clean public repository | PUBLISHED / STATIC REMOTE QA PASS | Public root commit `7d0f029d526d8b617a035aaca5abc15d94e26be9`; initial published tree `cdeeb9f1826ba6b2289df487fbe219a90626a228`. |
+| Clean public repository | PUBLISHED / FINAL EXACT-TREE QA PASS | Independent root history exists and the exact public source tree has passed final source QA. |
 | Public Git history | PASS / CLEAN ROOT | Root commit has zero parents; unrelated/private repository ancestry is absent. |
 
 ## Documentation Integrity State
@@ -47,8 +51,8 @@ quality benchmark review
 -> targeted quality-parity remediation
 -> cross-document integration correction
 -> final readiness-state correction
--> targeted integration re-verification
--> final documentation acceptance
+-> exact public-tree/source QA
+-> final documentation reconciliation
 ```
 
 The documentation gate is closed and accepted.
@@ -84,7 +88,7 @@ The executable remains internal engineering evidence and is not a public release
 
 ## Screenshot Evidence State
 
-The exact public candidate now contains:
+The exact public candidate contains:
 
 ```text
 evidence/screenshots/
@@ -105,7 +109,7 @@ DIRECT_VISUAL_QA            = WAIVED BY RELEASE OWNER
 SCREENSHOT_ADMISSION        = ACCEPTED BY RELEASE OWNER
 ```
 
-This acceptance does not create a claim that independent visual QA was performed.
+`EVD-VB-004` is intentionally preserved as the accepted pre-fix About reference. The final corrected About layout is separately owner-verified; screenshot replacement was waived. This acceptance does not create a claim that independent visual QA was performed or that `EVD-VB-004` is an exact image of the final layout.
 
 ## Public Scope
 
@@ -138,13 +142,15 @@ MINIMAL_SOURCE_REPOSITORY_LICENSING  = PASS / ACCEPTED
 DOCUMENTATION_QUALITY_PARITY         = PASS / ACCEPTED
 DOCUMENTATION_INTEGRATION            = PASS / ACCEPTED
 DOCUMENTATION_GATE                   = CLOSED / ACCEPTED
-SCREENSHOT_FILES_IN_CANDIDATE        = PRESENT / 4 OF 4
 SCREENSHOT_VISUAL_QA                 = WAIVED BY RELEASE OWNER
 SCREENSHOT_ADMISSION                 = ACCEPTED / OWNER DECISION
+EVD-VB-004                           = PRE-FIX REFERENCE / REPLACEMENT WAIVED
+ABOUT_LAYOUT_FINAL                   = PASS / OWNER VERIFIED
 PUBLIC_REPOSITORY                    = PUBLISHED / CLEAN ROOT HISTORY
-STATIC_REMOTE_TREE_QA                = PASS
-FINAL_PUBLIC_TREE_QA                 = PARTIAL / CLEAN-CHECKOUT QA PENDING
-PUBLIC_RELEASE_READY                 = NO
+FINAL_PUBLIC_TREE_QA                 = PASS / ACCEPTED
+DOCUMENTATION_RECONCILIATION         = PASS / ACCEPTED
+PUBLIC_RELEASE_READY                 = YES
+TAG_v1.1.0                           = PENDING
 ```
 
 ## Evidence Boundary
@@ -163,12 +169,12 @@ Current prerequisite chain:
 ```text
 MATCHING VECTOR BARRAGE SOURCE RUNTIME = PASS
 DOCUMENTATION GATE                     = CLOSED / ACCEPTED
-SCREENSHOT FILE PRESENCE               = PASS / 4 OF 4
 SCREENSHOT ADMISSION                   = ACCEPTED / OWNER DECISION
--> public repository = PUBLISHED / CLEAN ROOT HISTORY
--> static remote-tree QA = PASS
--> clean-checkout/source QA = NEXT
--> final release decision
+PUBLIC REPOSITORY                      = PUBLISHED / CLEAN ROOT HISTORY
+FINAL PUBLIC-TREE QA                   = PASS / ACCEPTED
+DOCUMENTATION RECONCILIATION           = PASS / ACCEPTED
+-> release ready
+-> v1.1.0 tag pending
 ```
 
 ## No-Loss Boundary
@@ -179,8 +185,8 @@ SCREENSHOT ADMISSION                   = ACCEPTED / OWNER DECISION
 - The matching Windows source runtime has been reconfirmed with Python `3.13.15`, Pygame `2.6.1`, successful package import and a visible game window.
 - Earlier automated baselines remain traceable as historical checkpoints but do not replace the current `125 PASS` baseline.
 - Packaged validation records are preserved privately and omitted from the final public copy under the current profile.
-- Historical/root screenshots are preserved but are not reclassified as current Vector Barrage evidence.
-- Direct visual screenshot QA was explicitly waived by the release owner; the evidence is accepted administratively and must not be described as independently visually verified.
+- `EVD-VB-004` is preserved as a pre-fix About reference and is not reclassified as exact final-layout evidence.
+- Direct visual screenshot QA was explicitly waived by the release owner.
 - If executable distribution is introduced later, binary-specific compliance must be reopened.
 - Private workflow identifiers, approval phrases and internal gate mechanics remain excluded from public-facing deliverables.
 
@@ -189,18 +195,17 @@ SCREENSHOT ADMISSION                   = ACCEPTED / OWNER DECISION
 ```text
 SOURCE_IMPLEMENTATION              = ACCEPTED
 DOCUMENTATION_GATE                 = CLOSED / ACCEPTED
-WINDOWS_SOURCE_RUNTIME             = PASS / RECONFIRMED
-HARDENED_ARTIFACT_IDENTITY         = PASS / EXACT MATCH
-SCREENSHOT_EVIDENCE                = PRESENT / ACCEPTED BY RELEASE OWNER
+SCREENSHOT_ADMISSION               = ACCEPTED / OWNER DECISION
 SCREENSHOT_VISUAL_QA               = WAIVED
-SCREENSHOT_ADMISSION               = ACCEPTED
-CLEAN_PUBLIC_REPOSITORY            = PUBLISHED / STATIC REMOTE QA PASS
-PUBLIC_ROOT_COMMIT                 = 7d0f029d526d8b617a035aaca5abc15d94e26be9
-INITIAL_PUBLIC_TREE_SHA            = cdeeb9f1826ba6b2289df487fbe219a90626a228
-FINAL_PUBLIC_TREE_QA               = PARTIAL / CLEAN-CHECKOUT QA PENDING
-PUBLIC_RELEASE_READY               = NO
+EVD-VB-004                         = PRE-FIX REFERENCE / REPLACEMENT WAIVED
+ABOUT_LAYOUT_FINAL                 = PASS / OWNER VERIFIED
+CLEAN_PUBLIC_REPOSITORY            = PUBLISHED
+FINAL_PUBLIC_TREE_QA               = PASS / ACCEPTED
+DOCUMENTATION_RECONCILIATION       = PASS / ACCEPTED
+PUBLIC_RELEASE_READY               = YES
+TAG_v1.1.0                         = PENDING
 ```
 
 ## Next Product Step
 
-Execute clean-checkout reproducibility QA against the published `VictorDector/vector-barrage-python-pygame` repository: clone the exact public state into an isolated temporary checkout, install under Python 3.13, verify package import, run the full regression suite, execute source smoke validation, then complete the final release-readiness decision.
+Create and verify the annotated `v1.1.0` tag against the accepted release commit after this documentation reconciliation is committed and remotely verified. No public binary asset is part of the release scope.

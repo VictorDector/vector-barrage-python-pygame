@@ -82,7 +82,7 @@ Publication readiness requires, as applicable:
 - MIT repository license present;
 - concise third-party notice aligned to Python/Pygame;
 - publication scope finalized;
-- screenshot evidence visually admitted before public use;
+- screenshot evidence admitted before public use;
 - clean public repository assembled without private/historical material;
 - clean-checkout installation, tests and source smoke QA completed.
 
@@ -121,6 +121,8 @@ The versioned public `scores.txt` must never be consumed as disposable QA data.
 - `requirements_acceptance.md` decides requirement acceptance.
 - `release_readiness.md` decides publication readiness.
 
+Screenshot admission under an owner waiver does not prove independent visual QA or exact final visual equivalence. A separately owner-verified final UI may coexist with a preserved pre-fix screenshot when the evidence disposition states that limitation explicitly.
+
 ## Current Validation Baseline
 
 ```text
@@ -130,11 +132,13 @@ V3 BEHAVIOR                    = PASS — 125 automated tests
 V4 GUI_AUDIO SOURCE            = PASS
 V5 INTEGRATION SOURCE          = PASS
 SOURCE RELAUNCH PERSISTENCE    = PASS
-DOCUMENTATION INTEGRITY        = RECONCILED / APPROVAL REQUIRED
 V6 PACKAGED_RUNTIME            = PASS / INTERNAL ENGINEERING EVIDENCE
-V7 PUBLICATION                 = OPEN
-SCREENSHOT ADMISSION           = PENDING
-CLEAN PUBLIC TREE QA           = LOCKED
+SCREENSHOT ADMISSION           = ACCEPTED / OWNER DECISION
+EVD-VB-004                     = PRE-FIX REFERENCE / REPLACEMENT WAIVED
+FINAL ABOUT LAYOUT             = PASS / OWNER VERIFIED
+FINAL PUBLIC-TREE QA           = PASS / ACCEPTED
+DOCUMENTATION RECONCILIATION   = PASS / ACCEPTED
+V7 PUBLICATION READINESS       = PASS / TAG PENDING
 ```
 
 Historical `108` and `109` automated-test results remain valid for their original checkpoints but are superseded by the current `125 PASS` regression baseline.

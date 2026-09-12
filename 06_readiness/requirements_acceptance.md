@@ -3,11 +3,11 @@
 Project: **Vector Barrage**  
 Release target: `v1.1.0`  
 Publication profile: **Source-First Portfolio Repository**  
-Status: **SOURCE REQUIREMENTS + DOCUMENTATION + EVIDENCE ACCEPTED / PUBLIC REPOSITORY PUBLISHED / CLEAN-CHECKOUT QA PENDING**
+Status: **SOURCE REQUIREMENTS + DOCUMENTATION + EVIDENCE ACCEPTED / FINAL PUBLIC-TREE QA PASS / RELEASE READY**
 
 ## Purpose
 
-Determine whether the implemented Vector Barrage candidate satisfies the requirement and CTQ baseline defined in `01_context/requirement_ctq_map.md`, while keeping source acceptance, internal packaging evidence and final public-release authorization as separate decisions.
+Determine whether the implemented Vector Barrage release satisfies the requirement and CTQ baseline defined in `01_context/requirement_ctq_map.md`, while keeping source acceptance, internal packaging evidence and final public-release tagging as separate decisions.
 
 This document answers:
 
@@ -22,10 +22,10 @@ Acceptance is evaluated against:
 - Current source/configuration regression baseline: `125 PASS`.
 - Accepted source GUI/audio, integration and persistence/relaunch evidence.
 - Accepted internal Windows packaging evidence where explicitly mapped to `NFR-11` and `NFR-12`.
-- Accepted documentation integration state.
-- Four canonical screenshot files admitted by release-owner decision; direct independent visual QA was explicitly waived and is not claimed as PASS.
+- Accepted documentation integration and final reconciliation state.
+- Screenshot evidence admitted by release-owner decision under the explicit claim boundaries below.
 
-Requirements define what must be true. Evidence proves a matching scope. This file records the acceptance result. Final publication authorization remains owned by `release_readiness.md`.
+Requirements define what must be true. Evidence proves a matching scope. This file records the acceptance result. Final release tagging remains owned by the release process after this documentation state is committed and verified.
 
 ## 2. Functional Requirements Acceptance
 
@@ -35,13 +35,13 @@ Requirements define what must be true. Evidence proves a matching scope. This fi
 | `FR-02` | Player movement/firing | Horizontal movement remains bounded and firing creates controlled projectile behavior. | `gameplay/model.py`, `rules.py`, `session.py`; gameplay tests; source runtime | PASS |
 | `FR-03` | Enemy/wave gameplay | Enemy formation exists, moves deterministically and progresses coherently after wave completion. | gameplay model/rules/session; automated regression; source gameplay runtime | PASS |
 | `FR-04` | Collision, damage and scoring | One valid collision consumes intended entities, increments score once and emits one destruction event; loss reaches Game Over correctly. | `rules.py`, `session.py`; collision/scoring tests; integrated runtime | PASS |
-| `FR-05` | Live HUD | Lives, level and score visibly reflect authoritative runtime state. | `gameplay/renderer.py`; GUI/runtime validation; canonical `EVD-VB-002` file accepted by release-owner decision | PASS |
+| `FR-05` | Live HUD | Lives, level and score visibly reflect authoritative runtime state. | `gameplay/renderer.py`; GUI/runtime validation; accepted `EVD-VB-002` reference | PASS |
 | `FR-06` | High-score presentation | Valid records parse safely, sort descending and Top 5 display; malformed records do not terminate the application. | `storage.py`, `screens/scores.py`; storage tests; source Scores runtime | PASS |
 | `FR-07` | Strict new-record handling | Only `final_score > prior_max`; valid name required; exactly one accepted append. | `rules.py`, `app.py`, `screens/name_entry.py`, `storage.py`; targeted source record-flow validation | PASS |
 | `FR-08` | Local score persistence/compatibility | Canonical `scores.txt` is authoritative; controlled legacy migration/fallback works; persisted score survives process relaunch. | `storage.py`, `app.py`; automated storage coverage; `EVD-VB-006` source persistence/relaunch validation | PASS |
 | `FR-09` | Semantic audio | Menu/gameplay loops and destruction/new-record cues transition with state; audio failure is fail-soft. | `audio.py`, `app.py`, `session.py`; service tests; accepted GUI/audio runtime | PASS |
 | `FR-10` | Generated visual presentation | Required UI/game surfaces render without external game-art files or copied project font assets. | renderer/screens, `ui_fonts.py`; generated-media tests; source GUI validation | PASS |
-| `FR-11` | About/product identity | Product, author, technology and approved repository link are shown; return navigation works. | `screens/about.py`, `links.py`, `config.py`; screen/service tests; source runtime | PASS |
+| `FR-11` | About/product identity | Product, author, technology and approved repository link are shown; return navigation works. | `screens/about.py`, `links.py`, `config.py`; screen/service tests; final About layout owner-verified | PASS |
 
 Functional result:
 
@@ -66,10 +66,10 @@ FUNCTIONAL_ACCEPTANCE   = PASS
 | `NFR-10` | Source GUI operability | Integrated application renders/responds in a documented graphical source profile. | accepted source runtime validation; documented standard + validated WSL2/X11 path | PASS |
 | `NFR-11` | Optional Windows packaging capability | Hardened package builds and preserves accepted behavior. | controlled spec/hook + internal native build/runtime evidence | PASS / INTERNAL EVIDENCE |
 | `NFR-12` | Optional packaged persistence | First-run initialization and complete-relaunch score persistence work. | isolated packaged first-run/relaunch QA | PASS / INTERNAL EVIDENCE |
-| `NFR-13` | Documentation integrity | Public dossier matches current architecture, states, commands and source-first publication boundary with quality parity at least equal to the accepted baseline. | cross-version quality audit + parity remediation + cross-document integration correction + final re-verification | PASS / ACCEPTED |
+| `NFR-13` | Documentation integrity | Public dossier matches current architecture, states, commands and source-first publication boundary with quality parity at least equal to the accepted baseline. | quality audit + parity remediation + cross-document integration + final reconciliation | PASS / ACCEPTED |
 | `NFR-14` | Licensing clarity | MIT covers owned material; NOTICE separates Python/Pygame/tooling; no public binary is implied. | `LICENSE`, `NOTICE.md`, `pyproject.toml` | PASS / ACCEPTED |
-| `NFR-15` | Fresh evidence integrity | Public screenshots/validation records match the exact Vector Barrage candidate. | `EVD-VB-005/006` accepted; four canonical screenshot files present and admitted by release-owner decision; direct visual QA waived | PASS / ACCEPTED BY OWNER DECISION |
-| `NFR-16` | Clean public-tree integrity | Public repository contains only allowed source/evidence and passes clean-checkout install/tests/smoke QA. | clean root publication + final public-tree QA | PARTIAL / STATIC REMOTE QA PASS / CLEAN-CHECKOUT PENDING |
+| `NFR-15` | Public evidence integrity | Evidence must match its claimed boundary; visual references affected by later UI changes require explicit disposition. | `EVD-VB-001..003` current references; `EVD-VB-004` pre-fix reference under owner waiver; final About layout owner-verified; `EVD-VB-005/006` accepted source evidence | PASS / CONTROLLED EVIDENCE EXCEPTION |
+| `NFR-16` | Clean public-tree integrity | Public repository contains only allowed source/evidence and passes clean-checkout install/tests/smoke QA. | independent clean root + exact public commit/tree clean-checkout install/import/125-test/public-seed/worktree QA | PASS |
 
 Non-functional result:
 
@@ -79,8 +79,8 @@ NFR-11_PACKAGING            = PASS / INTERNAL EVIDENCE
 NFR-12_PACKAGED_PERSISTENCE = PASS / INTERNAL EVIDENCE
 NFR-13_DOCUMENTATION        = PASS / ACCEPTED
 NFR-14_LICENSING            = PASS / ACCEPTED
-NFR-15_EVIDENCE             = PASS / ACCEPTED BY OWNER DECISION
-NFR-16_PUBLIC_TREE          = PARTIAL / STATIC REMOTE QA PASS / CLEAN-CHECKOUT PENDING
+NFR-15_EVIDENCE             = PASS / CONTROLLED EVIDENCE EXCEPTION
+NFR-16_PUBLIC_TREE          = PASS
 ```
 
 ## 4. Validation-Level Coverage
@@ -93,9 +93,9 @@ NFR-16_PUBLIC_TREE          = PARTIAL / STATIC REMOTE QA PASS / CLEAN-CHECKOUT P
 | `V4` GUI_AUDIO | integrated source application and procedural media | PASS |
 | `V5` INTEGRATION | navigation, game result, record flow and persistence orchestration | PASS |
 | `V6` PACKAGED_RUNTIME | hardened Windows package | PASS / INTERNAL EVIDENCE |
-| `V7` PUBLICATION | exact public repository + admitted evidence + clean-checkout QA | PARTIAL / STATIC REMOTE QA PASS / CLEAN-CHECKOUT PENDING |
+| `V7` PUBLICATION | exact public repository + admitted evidence + clean-checkout QA + documentation reconciliation | PASS / RELEASE READY — TAG PENDING |
 
-Automated success does not replace GUI/audio observation. Source runtime success does not establish packaged-runtime success. Packaged-runtime success does not authorize public binary distribution. Screenshot admission by owner decision does not imply that independent direct visual QA was performed.
+Automated success does not replace GUI/audio observation. Source runtime success does not establish packaged-runtime success. Packaged-runtime success does not authorize public binary distribution. Screenshot admission by owner decision does not imply independent direct visual QA.
 
 ## 5. Evidence Mapping
 
@@ -104,7 +104,7 @@ FR-01..FR-11
 -> current automated suite
 -> accepted source runtime/integration
 -> source evidence EVD-VB-005 / EVD-VB-006 where applicable
--> admitted canonical screenshots where applicable
+-> admitted screenshot references where applicable
 
 NFR-01..NFR-10
 -> pyproject/source tree
@@ -117,24 +117,24 @@ NFR-11..NFR-12
 
 NFR-13
 -> cross-version documentation quality audit
--> six-document quality-parity remediation
--> cross-document integration correction across state/CTQ/solution/publication/evidence surfaces
--> targeted re-verification PASS
+-> quality-parity remediation
+-> cross-document integration correction
+-> final documentation reconciliation
 -> documentation gate CLOSED / ACCEPTED
 
 NFR-14
 -> LICENSE + NOTICE + dependency metadata
 
 NFR-15
--> source evidence accepted
--> four canonical PNG files physically present
--> screenshot admission ACCEPTED BY RELEASE OWNER
--> direct visual QA WAIVED, not represented as PASS
+-> EVD-VB-001..003 accepted current references
+-> EVD-VB-004 accepted pre-fix reference; replacement waived
+-> final About layout owner-verified
+-> EVD-VB-005/006 accepted source evidence
+-> direct independent screenshot QA not claimed
 
 NFR-16
--> clean public repository published with independent root history
--> static remote-tree verification PASS
--> exact clean-checkout/source QA NEXT
+-> clean public repository with independent root history
+-> exact public-tree clean-checkout install/import/125-test/public-seed/worktree QA PASS
 ```
 
 ## 6. Packaging Engineering Evidence
@@ -162,12 +162,12 @@ This evidence supports `NFR-11`/`NFR-12`; it does not create a public executable
 | MIT `LICENSE` | PASS / ACCEPTED | Applies to Vector Barrage-owned material. |
 | Concise `NOTICE.md` | PASS / ACCEPTED | Separates Python/Pygame/tooling licensing and states no public executable. |
 | Dependency metadata | PASS | Python/Pygame boundary declared canonically in `pyproject.toml`. |
-| Documentation quality parity | PASS / ACCEPTED | Six targeted documents were strengthened against the accepted first-version quality baseline. |
-| Documentation integration | PASS / ACCEPTED | Corrected integration state passed targeted re-verification and the documentation gate is closed. |
-| Screenshot evidence | PRESENT / ACCEPTED BY RELEASE OWNER | Four canonical PNG files are admitted; direct independent visual QA was waived. |
+| Documentation quality parity | PASS / ACCEPTED | Accepted engineering depth preserved or improved. |
+| Documentation integration | PASS / ACCEPTED | Final cross-document state reconciliation completed. |
+| Screenshot evidence | ACCEPTED / OWNER DECISION | `EVD-VB-001..003` current references; `EVD-VB-004` controlled pre-fix reference. |
 | Screenshot ID/filename normalization | PASS | `EVD-VB-001` through `EVD-VB-004` canonical filenames are present. |
-| Clean public repository | PUBLISHED / STATIC REMOTE QA PASS | Target `VictorDector/vector-barrage-python-pygame`; root commit has zero parents. |
-| Clean-checkout install/tests/smoke | PENDING / NEXT | Run against the exact published public repository state after documentation-state synchronization. |
+| Clean public repository | PASS / FINAL EXACT-TREE QA ACCEPTED | Target `VictorDector/vector-barrage-python-pygame`; exact published source snapshot validated. |
+| Clean-checkout install/tests/smoke | PASS / ACCEPTED | Exact published source tree passed clean-checkout QA. |
 
 ## 8. Publication Profile Decision
 
@@ -194,10 +194,14 @@ DOCUMENTATION_QUALITY_PARITY        = PASS / ACCEPTED
 DOCUMENTATION_INTEGRATION           = PASS / ACCEPTED
 SCREENSHOT_ADMISSION                = ACCEPTED / OWNER DECISION
 SCREENSHOT_VISUAL_QA                = WAIVED
-PUBLIC_TREE_QA                      = PARTIAL / STATIC REMOTE QA PASS / CLEAN-CHECKOUT PENDING
+EVD-VB-004                          = PRE-FIX REFERENCE / REPLACEMENT WAIVED
+ABOUT_LAYOUT_FINAL                  = PASS / OWNER VERIFIED
+PUBLIC_TREE_QA                      = PASS / ACCEPTED
+DOCUMENTATION_RECONCILIATION        = PASS / ACCEPTED
 PUBLIC_REPOSITORY                   = PUBLISHED / CLEAN ROOT HISTORY
 PUBLIC_BINARY_DISTRIBUTION          = N/A
-PUBLIC_RELEASE_READY                = NO
+PUBLIC_RELEASE_READY                = YES
+TAG_v1.1.0                          = PENDING
 ```
 
-The implemented product, documentation and admitted evidence are accepted within the current source-first scope. The clean public repository is published with independent root history and has passed static remote-tree verification. Final public release acceptance remains intentionally open until exact clean-checkout install/tests/source-smoke QA passes.
+No technical, licensing, evidence-admission or public-tree blocker remains within the current source-first scope. Release awaits the final documentation commit verification and creation of the annotated `v1.1.0` tag.

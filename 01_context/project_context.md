@@ -5,7 +5,7 @@ Publication profile: **Source-First Portfolio Repository**
 
 ## Product Definition
 
-Vector Barrage is an independently implemented fixed-shooter arcade game built with Python and Pygame. The public portfolio candidate demonstrates application coordination, deterministic gameplay, persistence, procedural presentation, automated testing and engineering documentation.
+Vector Barrage is an independently implemented fixed-shooter arcade game built with Python and Pygame. The public portfolio release demonstrates application coordination, deterministic gameplay, persistence, procedural presentation, automated testing and engineering documentation.
 
 Public product identity:
 
@@ -16,6 +16,7 @@ Author            = Victor David Dector Ramirez
 Technical stack   = Python 3.13.x + Pygame 2.6.1
 UI language       = Spanish
 Public profile    = SOURCE-FIRST PORTFOLIO
+Package version   = 1.1.0
 ```
 
 The public product identity does not use historical course/provider branding or third-party game branding as its own product identity.
@@ -66,14 +67,14 @@ The repository does not assume access to the historical private development repo
 
 ## Publication Objective
 
-The current objective is to publish a clean, inspectable source repository that allows a reviewer to:
+The source-first repository allows a reviewer to:
 
 - inspect the application source and architecture;
 - install declared dependencies using standard Python tooling;
 - run the game from source;
 - run the automated regression suite;
 - inspect requirements, architecture decisions, policies, runbooks and readiness evidence;
-- review accepted screenshots;
+- review accepted screenshot evidence within its declared claim boundary;
 - inspect the controlled PyInstaller configuration as engineering evidence.
 
 A downloadable standalone Windows executable is **not** part of the current publication profile.
@@ -109,7 +110,7 @@ The public repository does not vendor Python or Pygame binaries. Users install d
 
 ## Development and Execution Environments
 
-The product architecture is platform-oriented rather than tied to one developer machine. The current documented execution surfaces are:
+The product architecture is platform-oriented rather than tied to one developer machine.
 
 ### General source execution
 
@@ -143,7 +144,7 @@ PLAYER_04,150
 PLAYER_05,100
 ```
 
-Historical/private player data is not part of the public candidate.
+Historical/private player data is not part of the public release.
 
 ## Media Boundary
 
@@ -183,7 +184,7 @@ Detailed structures are documented in `02_architecture/` and `04_solution/`.
 7. Source validation, packaged-runtime validation and public-release readiness remain separate claim boundaries.
 8. The current publication profile must not imply that a public `VectorBarrage.exe` download exists.
 9. Public documentation must describe the as-built product and current release state rather than private workflow mechanics.
-10. Evidence used for public claims must match the exact Vector Barrage candidate it supports.
+10. Evidence used for public claims must match the exact Vector Barrage claim boundary it supports.
 
 ## Out of Scope
 
@@ -207,6 +208,7 @@ Current accepted source/configuration regression:
 
 ```text
 AUTOMATED_TESTS = 125 PASS
+FINAL_PUBLIC_TREE_QA = PASS / ACCEPTED
 ```
 
 Earlier 108/109-test results are preserved as historical checkpoints but are superseded by the current baseline.
@@ -244,25 +246,33 @@ Current public-evidence direction:
 ```text
 source/runtime evidence       = accepted
 source persistence evidence   = accepted
-screenshots                   = captured / visual QA pending
+screenshots EVD-VB-001..003   = accepted current references
+EVD-VB-004 About screenshot   = accepted pre-fix reference
+screenshot replacement        = waived by release owner
+independent screenshot QA     = not claimed
+final About layout            = pass / owner verified
 packaged Windows evidence     = internal engineering evidence
 public executable             = not distributed
 ```
 
-Only evidence aligned to the final public candidate may support public claims.
+Only evidence aligned to its declared claim boundary may support public claims.
 
 ## Current Project State
 
 ```text
 SOURCE_IMPLEMENTATION                  = PASS / ACCEPTED
+PACKAGE_VERSION                        = 1.1.0
 AUTOMATED_REGRESSION                   = 125 PASS
 MIT_LICENSE                            = PASS / ACCEPTED
 THIRD_PARTY_NOTICE                     = PASS / ACCEPTED
 SOURCE_FIRST_PUBLICATION_PROFILE       = APPROVED
 PUBLIC_EXECUTABLE_DOWNLOAD             = NO
-DOCUMENTATION_QUALITY_PARITY_REMEDIATION = IMPLEMENTED / QA REQUIRED
-SOURCE_FIRST_DOC_TREE_RECONCILIATION   = APPROVAL REQUIRED
-SCREENSHOT_ADMISSION                   = BLOCKED UNTIL DOCUMENTATION QA/APPROVAL
-PUBLIC_REPOSITORY                      = NOT CREATED
-PUBLIC_RELEASE_READY                   = NO
+SCREENSHOT_ADMISSION                   = ACCEPTED / OWNER DECISION
+EVD-VB-004                             = PRE-FIX REFERENCE / REPLACEMENT WAIVED
+ABOUT_LAYOUT_FINAL                     = PASS / OWNER VERIFIED
+PUBLIC_REPOSITORY                      = PUBLISHED
+FINAL_PUBLIC_TREE_QA                   = PASS / ACCEPTED
+DOCUMENTATION_RECONCILIATION           = PASS / ACCEPTED
+PUBLIC_RELEASE_READY                   = YES
+TAG_v1.1.0                             = PENDING
 ```

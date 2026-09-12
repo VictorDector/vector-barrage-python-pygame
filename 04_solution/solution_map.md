@@ -29,7 +29,7 @@ Detailed responsibilities belong in `02_architecture/`; acceptance criteria in `
 | Gameplay rendering | `gameplay/renderer.py` | `FR-05`, `FR-10` | PASS |
 | Main Menu | `screens/menu.py` | `FR-01` | PASS |
 | Scores | `screens/scores.py` | `FR-06` | PASS |
-| About | `screens/about.py` | `FR-11` | PASS |
+| About | `screens/about.py` | `FR-11` | PASS / FINAL LAYOUT OWNER VERIFIED |
 | Name Entry | `screens/name_entry.py` | `FR-07` | PASS |
 | Synthetic score seed | `scores.txt` | `NFR-05` | PASS |
 | Dependency/build metadata | `pyproject.toml` | `NFR-01` | PASS |
@@ -40,8 +40,8 @@ Detailed responsibilities belong in `02_architecture/`; acceptance criteria in `
 | MIT license | `LICENSE` | `NFR-14` | PASS / ACCEPTED |
 | Third-party boundary | `NOTICE.md` | `NFR-14` | PASS / ACCEPTED |
 | Engineering dossier | README + `00`–`06` | `NFR-13` | PASS / ACCEPTED |
-| Screenshot evidence | `evidence/screenshots/` | `NFR-15` | PRESENT / ACCEPTED BY OWNER DECISION |
-| Clean public tree | target public repository | `NFR-16` | PUBLISHED / STATIC REMOTE QA PASS / CLEAN-CHECKOUT PENDING |
+| Screenshot evidence | `evidence/screenshots/` | `NFR-15` | ACCEPTED / CONTROLLED EVIDENCE BOUNDARY |
+| Clean public tree | target public repository | `NFR-16` | PASS / FINAL EXACT-TREE QA ACCEPTED |
 
 ## 2. Physical Dependency Map
 
@@ -142,6 +142,8 @@ semantic event
 
 No gameplay image/audio asset tree is required.
 
+`EVD-VB-004` is retained as the accepted pre-fix About screenshot under an explicit replacement waiver; the final responsive About layout is separately owner-verified.
+
 ## 8. Execution Paths
 
 ### Source — validated/public
@@ -214,22 +216,16 @@ Accepted:
 - controlled packaging configuration;
 - hardened package QA as internal evidence;
 - MIT license;
-- concise third-party notice.
+- concise third-party notice;
+- screenshot admission under the bounded evidence rules;
+- exact public-tree/source QA;
+- final documentation reconciliation.
 
-Documentation state:
+Remaining release action:
 
-- cross-version quality-parity audit completed;
-- targeted six-document remediation accepted;
-- cross-document integration correction accepted;
-- documentation gate closed;
-- screenshot evidence admitted by release-owner decision;
-- clean public repository published with independent root history;
-- static remote-tree verification PASS.
+- create and verify the annotated `v1.1.0` tag.
 
-Still open:
-
-- final clean-checkout install/tests/source smoke QA;
-- final publication decision.
+No source/runtime, licensing, evidence-admission or clean-checkout blocker remains.
 
 ## Current Result
 
@@ -245,8 +241,10 @@ PUBLIC_BINARY_DISTRIBUTION        = N/A
 DOCUMENTATION_QUALITY_PARITY      = PASS / ACCEPTED
 DOCUMENTATION_INTEGRATION         = PASS / ACCEPTED
 SCREENSHOT_ADMISSION              = ACCEPTED / OWNER DECISION
+EVD-VB-004                        = PRE-FIX REFERENCE / REPLACEMENT WAIVED
 PUBLIC_REPOSITORY                 = PUBLISHED / CLEAN ROOT HISTORY
-STATIC_REMOTE_TREE_QA             = PASS
-FINAL_PUBLIC_TREE_QA              = PARTIAL / CLEAN-CHECKOUT QA PENDING
-RELEASE                           = OPEN
+FINAL_PUBLIC_TREE_QA              = PASS / ACCEPTED
+DOCUMENTATION_RECONCILIATION      = PASS / ACCEPTED
+RELEASE_READY                     = YES
+TAG_v1.1.0                        = PENDING
 ```

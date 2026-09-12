@@ -69,7 +69,7 @@ The current profile does not publish or attach a generated Windows executable.
 - If migration cannot be written, legacy data remains preserved/readable.
 - Write-path tests use temporary/isolated files.
 - The versioned public seed remains synthetic.
-- Final public-tree preparation verifies the five-record seed rather than using repository data as disposable QA state.
+- Final public-tree validation verifies the five-record seed rather than using repository data as disposable QA state.
 
 ## 6. Runtime Resource and Persistence Separation
 
@@ -84,7 +84,7 @@ The current profile does not publish or attach a generated Windows executable.
 - Audio presentation is synthesized from source-defined numeric tone patterns.
 - No historical/copy-based gameplay artwork, music or sound-effect files are required.
 - New third-party media requires provenance/license disposition before public use.
-- Media changes affecting appearance/audio require fresh affected evidence.
+- Media changes affecting appearance/audio require fresh affected evidence or an explicit controlled evidence disposition.
 
 ## 8. Validation Accuracy
 
@@ -112,10 +112,13 @@ Policies:
 
 ## 9. Evidence Integrity
 
-- Public evidence must come from the exact Vector Barrage candidate it claims to validate.
+- Public evidence must match the exact claim boundary it supports.
 - Historical screenshots/executables from another implementation cannot be renamed into current evidence.
 - Screenshots support observable visual claims, not hidden logic/persistence claims.
-- Screenshot files require visual admission before public claim use.
+- Screenshot files require admission before public claim use.
+- A screenshot affected by a later visual correction must either be refreshed or explicitly dispositioned as a historical/pre-fix reference.
+- An owner waiver may permit retention of such evidence, but the waived screenshot must not be represented as exact final visual conformance.
+- Release documentation must distinguish screenshot admission from final UI verification.
 - Persistence/relaunch evidence requires complete process termination between runs when that is part of the claim.
 - Hardened Windows package evidence remains valid as internal engineering evidence but must not imply an executable download exists.
 
@@ -126,6 +129,7 @@ Policies:
 - Context, architecture, governance, solution, implementation and readiness documents must remain mutually coherent.
 - Paths/commands shown to users must match the package structure.
 - States such as `PENDING`, `PASS`, `CANDIDATE`, `N/A`, `SUPERSEDED` and `INTERNAL EVIDENCE` must not be silently upgraded.
+- Current-state projections must be reconciled after source/release state advances; stale but formerly correct statements are not acceptable as current release claims.
 - Public documentation must not expose unrelated private project-management/framework mechanics.
 
 ## 11. Change Integrity
@@ -162,7 +166,7 @@ PyInstaller packaging is retained as an optional local engineering workflow and 
 - Python, Pygame and development/build dependencies retain their own licenses.
 - No bundled executable or bundled third-party runtime is publicly distributed under the current profile.
 - Full binary redistribution compliance is `OPTIONAL FUTURE` and becomes mandatory only if public executable distribution is reactivated.
-- Current publication gates are documentation/tree reconciliation, screenshot admission, clean public-tree assembly and clean-checkout/source QA.
+- Current source-first release gates through exact public-tree QA and documentation reconciliation are satisfied; the annotated `v1.1.0` tag remains pending.
 
 ## Current Policy Result
 
@@ -175,6 +179,9 @@ MIT_LICENSE                    = PASS / ACCEPTED
 THIRD_PARTY_NOTICE             = PASS / ACCEPTED
 PUBLIC_BINARY_DISTRIBUTION     = N/A
 DOCUMENTATION_DEPTH            = PRESERVE_OR_IMPROVE
-SCREENSHOT_ADMISSION           = PENDING
-PUBLIC_RELEASE                 = GATED
+SCREENSHOT_ADMISSION           = ACCEPTED / OWNER DECISION
+EVD-VB-004                     = PRE-FIX REFERENCE / REPLACEMENT WAIVED
+FINAL_PUBLIC_TREE_QA           = PASS / ACCEPTED
+PUBLIC_RELEASE_READY           = YES
+TAG_v1.1.0                     = PENDING
 ```

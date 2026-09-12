@@ -39,6 +39,11 @@ Record material changes to the public Vector Barrage product and its release art
 | `VB-CHG-025` | `v1.1.0a0` | Publication-facing documentation and repository mask reconciled to the source-first profile and current `125 PASS` baseline. | Remove stale binary-release requirements, obsolete 109-test claims and outdated licensing HOLD language before public-tree assembly. | CLOSED / ACCEPTED |
 | `VB-CHG-026` | `v1.1.0a0` | Cross-version documentation quality audit used the accepted first-version dossier as a quality benchmark and applied targeted parity remediation to six Vector Barrage documents. | Preserve or improve documentation quality without copying obsolete private/binary-release content or inflating the public dossier. Restored project-context depth, behavioral contract granularity, explicit test/independence architecture, validated WSL2/X11 runbook detail, requirement-level acceptance traceability and the final public-tree acceptance gate. | CLOSED / ACCEPTED |
 | `VB-CHG-027` | `v1.1.0` | Clean public repository materialized as an independent root history and statically verified against the approved public tree. | Establish the autonomous public portfolio repository without private Git ancestry while preserving exact approved content. | CLOSED / STATIC REMOTE QA PASS |
+| `VB-CHG-028` | `v1.1.0a0` | Public documentation state was reconciled after clean-repository publication, aligning the public dossier to the independently published source-first tree. | Remove stale staging/publication wording without changing runtime behavior. | CLOSED / ACCEPTED |
+| `VB-CHG-029` | `v1.1.0a0` | About layout was made responsive to keep text within the viewport; the affected screen/service test was strengthened and the full regression remained `125 PASS`. The existing About screenshot was retained as a pre-fix reference after the release owner waived replacement. | Correct the observed About text-overflow defect while preserving explicit evidence history. | CLOSED / ACCEPTED |
+| `VB-CHG-030` | `v1.1.0` | Package and runtime version metadata were promoted from `1.1.0a0` to `1.1.0`; candidate and public-tree regression remained `125 PASS`. | Establish the stable release version without changing product behavior. | CLOSED / ACCEPTED |
+| `VB-CHG-031` | `v1.1.0` | The exact published `1.1.0` source tree completed clean-checkout installation, import, full regression, public-seed and worktree-integrity QA. | Prove reproducibility of the exact public source snapshot intended for release. | CLOSED / ACCEPTED |
+| `VB-CHG-032` | `v1.1.0` | Final public documentation taxonomy and release-state projections were reconciled across README, control, context, governance, solution, implementation, readiness and evidence surfaces. | Eliminate residual cross-document drift and establish a single consistent release-ready public dossier. | CLOSED / ACCEPTED |
 
 ## Current Candidate Result
 
@@ -56,14 +61,14 @@ HARDENED_WINDOWS_PACKAGE             = PASS / INTERNAL EVIDENCE
 MIT_LICENSE                          = PASS / ACCEPTED
 THIRD_PARTY_NOTICE                   = PASS / ACCEPTED
 PUBLIC_BINARY_DISTRIBUTION           = N/A
-DOC_QUALITY_PARITY_AUDIT             = COMPLETE
 DOC_QUALITY_PARITY_REMEDIATION       = PASS / ACCEPTED
-SOURCE_FIRST_DOC_TREE_RECONCILIATION = PASS / ACCEPTED
 SCREENSHOT_ADMISSION                 = ACCEPTED / OWNER DECISION
+EVD-VB-004                           = PRE-FIX REFERENCE / REPLACEMENT WAIVED
 PUBLIC_REPOSITORY                    = PUBLISHED / CLEAN ROOT HISTORY
-INITIAL_PUBLIC_TREE_SHA              = cdeeb9f1826ba6b2289df487fbe219a90626a228
-FINAL_PUBLIC_TREE_QA                 = PARTIAL / CLEAN-CHECKOUT QA PENDING
-PUBLIC_RELEASE_READY                 = NO
+FINAL_PUBLIC_TREE_QA                 = PASS / ACCEPTED
+DOCUMENTATION_RECONCILIATION         = PASS / ACCEPTED
+PUBLIC_RELEASE_READY                 = YES
+TAG_v1.1.0                           = PENDING
 ```
 
 ## Change Record Policy

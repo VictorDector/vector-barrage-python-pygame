@@ -19,11 +19,14 @@ Maintain stable, human-readable identifiers for the public product, runtime comp
 | Python distribution | `vector-barrage` |
 | Python package | `vector_barrage` |
 | Release target | `v1.1.0` |
-| Current package version | `1.1.0a0` |
+| Current package version | `1.1.0` |
 | Author | Victor David Dector Ramirez |
 | UI language | Spanish (`es`) |
 | Technical language | English |
 | Publication profile | Source-First Portfolio Repository |
+| Public repository state | PUBLISHED |
+| Final public-tree QA | PASS / ACCEPTED |
+| Release readiness | READY / TAG PENDING |
 | Public executable | Not distributed |
 
 ## State Vocabulary
@@ -113,16 +116,18 @@ PUBLICATION: INTERNAL EVIDENCE / NOT DISTRIBUTED
 
 | ID | Surface | State / publication disposition |
 |---|---|---|
-| `EVD-VB-001` | Main Menu screenshot | CAPTURED / QA PENDING |
-| `EVD-VB-002` | Gameplay/HUD screenshot | CAPTURED / QA PENDING |
-| `EVD-VB-003` | Scores screenshot | CAPTURED / QA PENDING |
-| `EVD-VB-004` | About screenshot | CAPTURED / QA PENDING |
+| `EVD-VB-001` | Main Menu screenshot | PRESENT / ACCEPTED / CURRENT REFERENCE |
+| `EVD-VB-002` | Gameplay/HUD screenshot | PRESENT / ACCEPTED / CURRENT REFERENCE |
+| `EVD-VB-003` | Scores screenshot | PRESENT / ACCEPTED / CURRENT REFERENCE |
+| `EVD-VB-004` | About screenshot | PRESENT / ACCEPTED / PRE-FIX REFERENCE / REPLACEMENT WAIVED |
 | `EVD-VB-005` | Source runtime validation | PASS / PUBLIC ENGINEERING EVIDENCE |
 | `EVD-VB-006` | Source persistence/relaunch validation | PASS / PUBLIC ENGINEERING EVIDENCE |
-| `EVD-VB-007` | Packaged runtime validation record | INTERNAL EVIDENCE / EXCLUDE FROM FINAL PUBLIC COPY |
-| `EVD-VB-008` | Packaged persistence/relaunch validation record | INTERNAL EVIDENCE / EXCLUDE FROM FINAL PUBLIC COPY |
+| `EVD-VB-007` | Packaged runtime validation record | INTERNAL EVIDENCE / EXCLUDED FROM PUBLIC TREE |
+| `EVD-VB-008` | Packaged persistence/relaunch validation record | INTERNAL EVIDENCE / EXCLUDED FROM PUBLIC TREE |
 
-Current physical screenshot filenames use `EVD-001` through `EVD-004`. Canonical documentation IDs use `EVD-VB-001` through `EVD-VB-004`. This mismatch is intentionally left OPEN until the screenshot-admission gate, where content and filename normalization will be handled together.
+Canonical physical screenshot filenames use `EVD-VB-001` through `EVD-VB-004`.
+
+`EVD-VB-004` predates the final responsive About-layout correction. The corrected About screen was verified by the release owner; replacement of the screenshot was explicitly waived. The file remains valid only as the accepted pre-fix reference and must not be used to claim exact final-layout equivalence.
 
 ## Media Identifiers
 
