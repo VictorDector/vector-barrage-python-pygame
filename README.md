@@ -325,8 +325,11 @@ Python, Pygame, pytest, PyInstaller and other third-party tooling retain their o
 
 See `NOTICE.md` and `pyproject.toml` for the applicable dependency and third-party boundary.
 
-## Author
+## Developer
 
-**Victor David Dector Ramirez**
+**Victor David Dector Ramirez**  
+AI & Data Science Engineer
 
-Repository: `VictorDector/vector-barrage-python-pygame`
+[LinkedIn](https://www.linkedin.com/in/victorddectorr/) · [GitHub Profile](https://github.com/VictorAOPS)
+
+© 2026 Victor David Dector Ramirez. Licensed under the MIT License.
